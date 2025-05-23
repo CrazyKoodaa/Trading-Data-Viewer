@@ -1,0 +1,677 @@
+// Trading Data Viewer - Main JavaScript
+
+// Global variables
+let currentData = [];
+let selectedFormat = 'csv';
+let chartInstance = null;
+
+// Debug logging function
+function debugLog(message, type = 'info') {
+    const timestamp = new Date().toLocaleTimeString();
+    console.log(`[${timestamp}] ${type.toUpperCase()}: ${message}`);
+}
+
+// Application initialization
+document.addEventListener('DOMContentLoaded', function() {
+    debugLog('Trading Data Viewer initialized');
+    initializeApp();
+});
+
+async function initializeApp() {
+    try {
+        debugLog('Starting app initialization...');
+        
+        // Set default date range (last 7 days for better performance)
+        const endDate = new Date();
+        const startDate = new Date();
+        startDate.setDate(startDate.getDate() - 7);
+        
+        document.getElementById('startDateInput').value = startDate.toISOString().split('T')[0];
+        document.getElementById('endDateInput').value = endDate.toISOString().split('T')[0];
+        
+        await loadSymbols();
+        setupEventListeners();
+        debugLog('Application initialized successfully');
+    } catch (error) {
+        debugLog(`Failed to initialize application: ${error.message}`, 'error');
+        showError('Failed to initialize application. Please refresh the page.');
+    }
+}
+
+// Event Listeners Setup
+function setupEventListeners() {
+    // Format selection for download modal
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('.format-option')) {
+            document.querySelectorAll('.format-option').forEach(opt => opt.classList.remove('selected'));
+            e.target.closest('.format-option').classList.add('selected');
+            selectedFormat = e.target.closest('.format-option').dataset.format;
+        }
+    });
+    
+    // Modal close on outside click
+    window.addEventListener('click', function(event) {
+        const modal = document.getElementById('downloadModal');
+        if (event.target === modal) {
+            closeDownloadModal();
+        }
+    });
+    
+    // Keyboard shortcuts
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeDownloadModal();
+        }
+        if (e.ctrlKey && e.key === 'r') {
+            e.preventDefault();
+            loadData();
+        }
+    });
+    
+    // Auto-refresh on filter change
+    const selects = document.querySelectorAll('#instrumentSelect, #timeframeSelect');
+    selects.forEach(select => {
+        select.addEventListener('change', debounce(loadData, 500));
+    });
+    
+    // Date inputs
+    const dateInputs = document.querySelectorAll('#startDateInput, #endDateInput');
+    dateInputs.forEach(input => {
+        input.addEventListener('change', debounce(loadData, 500));
+    });
+}
+
+// Utility function for debouncing
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Load available instruments
+async function loadSymbols() {
+    try {
+        debugLog('Loading instruments from API...');
+        showLoadingState('instruments');
+        
+        const response = await fetch('/api/instruments');
+        debugLog(`Instruments API response status: ${response.status}`);
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const instruments = await response.json();
+        debugLog(`Received instruments data: ${JSON.stringify(instruments).substring(0, 200)}...`);
+        debugLog(`Loaded ${instruments.length} instruments`);
+        
+        if (!Array.isArray(instruments)) {
+            throw new Error('Instruments API returned non-array data');
+        }
+        
+        if (instruments.length === 0) {
+            debugLog('WARNING: No instruments returned from API - check database tables!', 'error');
+            showError('No instruments found. Please check your database tables.');
+            return;
+        }
+        
+        const instrumentSelect = document.getElementById('instrumentSelect');
+        
+        if (!instrumentSelect) {
+            throw new Error('Instrument select element not found');
+        }
+        
+        // Clear existing options
+        instrumentSelect.innerHTML = '<option value="">Select an instrument</option>';
+        
+        // Populate instrument dropdown
+        instruments.forEach(instrument => {
+            const option = document.createElement('option');
+            option.value = instrument.table_name;
+            option.textContent = instrument.display_name;
+            instrumentSelect.appendChild(option);
+        });
+        
+        debugLog(`Successfully populated instrument dropdown with ${instruments.length} instruments`);
+        
+    } catch (error) {
+        debugLog(`Error loading instruments: ${error.message}`, 'error');
+        showError('Failed to load instruments. Please check your connection and database configuration.');
+        
+        // Show debug info in the UI
+        const instrumentSelect = document.getElementById('instrumentSelect');
+        if (instrumentSelect) {
+            instrumentSelect.innerHTML = '<option value="">Error loading instruments - check console</option>';
+        }
+    }
+}
+
+// Load and display data
+async function loadData() {
+    const instrument = document.getElementById('instrumentSelect').value;
+    const timeframe = document.getElementById('timeframeSelect').value;
+    
+    if (!instrument) {
+        showError('Please select an instrument first.');
+        return;
+    }
+    
+    // Get date range from inputs
+    let startDateStr = document.getElementById('startDateInput').value;
+    let endDateStr = document.getElementById('endDateInput').value;
+    
+    // Validate dates
+    if (!startDateStr || !endDateStr) {
+        showError('Please select both start and end dates.');
+        return;
+    }
+    
+    const startDate = new Date(startDateStr);
+    const endDate = new Date(endDateStr);
+    
+    if (startDate >= endDate) {
+        showError('Start date must be before end date.');
+        return;
+    }
+    
+    // Check if date range is too large (more than 90 days) for performance
+    const daysDiff = (endDate - startDate) / (1000 * 60 * 60 * 24);
+    if (daysDiff > 90) {
+        const proceed = confirm(`You've selected ${Math.round(daysDiff)} days of data. This might take a while to load. Continue?`);
+        if (!proceed) return;
+    }
+    
+    console.log(`Loading data: instrument=${instrument}, timeframe=${timeframe}, dateRange=${startDateStr} to ${endDateStr}`);
+    
+    try {
+        // Show loading states
+        showLoadingState('table');
+        showLoadingState('chart');
+        
+        // Build query parameters - use date range instead of limit
+        const params = new URLSearchParams();
+        params.append('timeframe', timeframe);
+        params.append('start_date', startDateStr);
+        params.append('end_date', endDateStr);
+        
+        // Load data from the API
+        const response = await fetch(`/api/data/${instrument}?${params}`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        currentData = data;
+        console.log(`Loaded ${data.length} records for date range ${startDateStr} to ${endDateStr}`);
+        
+        if (data.length === 0) {
+            showNoData();
+            return;
+        }
+        
+        // Update table and chart
+        updateTable(data, instrument);
+        updateChart(data, instrument);
+        
+        // Update page title
+        updatePageTitle(instrument, data.length, startDateStr, endDateStr);
+        
+    } catch (error) {
+        console.error('Error loading data:', error);
+        showError('Failed to load data. Please check your connection and try again.');
+        document.getElementById('tableContent').innerHTML = '<div class="no-data"><h3>Error loading data</h3><p>Please try again or check your database connection.</p></div>';
+        document.getElementById('chart').innerHTML = '<div class="no-data"><h3>Error loading chart</h3><p>Please try again or check your data.</p></div>';
+    }
+}
+
+// Update data table - Fixed to render directly in JavaScript
+function updateTable(data, instrument = '') {
+    try {
+        const tableContent = document.getElementById('tableContent');
+        
+        if (!data || data.length === 0) {
+            tableContent.innerHTML = `
+                <div class="no-data">
+                    <h3>No data found</h3>
+                    <p>Try adjusting your date range or check if the database contains data for this period.</p>
+                    <button onclick="loadData()" class="btn-primary">Reload Data</button>
+                </div>
+            `;
+            return;
+        }
+        
+        // Get headers from the first data object
+        const headers = Object.keys(data[0]);
+        
+        let tableHTML = `
+            <div class="table-wrapper">
+                <table id="dataTable">
+                    <thead>
+                        <tr>
+                            ${headers.map(h => 
+                                `<th style="cursor: pointer;" onclick="sortTable('${h}')">
+                                    ${h.replace(/_/g, ' ').toUpperCase()} 
+                                    <span class="sort-icon">↕</span>
+                                </th>`
+                            ).join('')}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${data.map(row => 
+                            `<tr>${headers.map(h => {
+                                let value = row[h];
+                                if (value === null || value === undefined) {
+                                    value = '';
+                                } else if (typeof value === 'number') {
+                                    // Format numbers nicely
+                                    if (h.includes('price') || h.includes('open') || h.includes('high') || h.includes('low') || h.includes('close')) {
+                                        value = parseFloat(value).toFixed(4);
+                                    } else if (h.includes('volume')) {
+                                        value = parseInt(value).toLocaleString();
+                                    } else {
+                                        value = value.toString();
+                                    }
+                                }
+                                return `<td>${value}</td>`;
+                            }).join('')}</tr>`
+                        ).join('')}
+                    </tbody>
+                </table>
+                <div class="table-footer">
+                    <div class="table-info">
+                        Showing ${data.length} records
+                        ${instrument ? `for instrument: <strong>${instrument}</strong>` : ''}
+                        <br>
+                        <small>Date range: ${document.getElementById('startDateInput').value} to ${document.getElementById('endDateInput').value}</small>
+                    </div>
+                    <div class="table-actions">
+                        <button onclick="exportTableToCSV()" class="btn-small">Export CSV</button>
+                        <button onclick="loadData()" class="btn-small">Refresh</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        tableContent.innerHTML = tableHTML;
+        console.log('Table updated successfully');
+        
+    } catch (error) {
+        console.error('Error updating table:', error);
+        document.getElementById('tableContent').innerHTML = `
+            <div class="no-data">
+                <h3>Error updating table</h3>
+                <p>Please try again or check your data.</p>
+                <button onclick="loadData()" class="btn-primary">Reload Data</button>
+            </div>
+        `;
+    }
+}
+
+// Update chart - Fixed to use the correct data source
+function updateChart(data, instrument) {
+    try {
+        const timeframe = document.getElementById('timeframeSelect').value;
+        
+        if (!data || data.length === 0) {
+            document.getElementById('chart').innerHTML = '<div class="no-data"><h3>No chart data available</h3><p>Try selecting a different date range or timeframe.</p></div>';
+            return;
+        }
+        
+        // Format data for chart - handle different possible field names
+        const chartData = data.map(item => {
+            // Try different possible datetime field names
+            const datetime = item.datetime || item.bar_end_datetime || item.timestamp;
+            if (!datetime) {
+                console.warn('No datetime field found in data item:', item);
+                return null;
+            }
+            
+            return {
+                datetime: new Date(datetime),
+                open: parseFloat(item.open || item.open_price || 0),
+                high: parseFloat(item.high || item.high_price || 0),
+                low: parseFloat(item.low || item.low_price || 0),
+                close: parseFloat(item.close || item.close_price || 0),
+                volume: parseFloat(item.volume || 0)
+            };
+        }).filter(item => item !== null); // Remove null items
+        
+        // Sort by datetime to ensure proper order
+        chartData.sort((a, b) => a.datetime - b.datetime);
+        
+        if (chartData.length === 0) {
+            document.getElementById('chart').innerHTML = '<div class="no-data"><h3>No valid chart data</h3><p>Data format may be incompatible.</p></div>';
+            return;
+        }
+        
+        console.log(`Prepared ${chartData.length} chart data points with timeframe: ${timeframe}`);
+        console.log('First few data points:', chartData.slice(0, 3));
+        console.log('Last few data points:', chartData.slice(-3));
+        
+        // Update chart title
+        const startDate = document.getElementById('startDateInput').value;
+        const endDate = document.getElementById('endDateInput').value;
+        const title = `${instrument} Price Chart (${timeframe}) - ${startDate} to ${endDate}`;
+        document.getElementById('chartTitle').textContent = title;
+        
+        // Create candlestick chart
+        const trace = {
+            x: chartData.map(d => d.datetime),
+            close: chartData.map(d => d.close),
+            decreasing: {line: {color: '#e74c3c'}},
+            high: chartData.map(d => d.high),
+            increasing: {line: {color: '#2ecc71'}},
+            line: {color: 'rgba(31,119,180,1)'},
+            low: chartData.map(d => d.low),
+            open: chartData.map(d => d.open),
+            type: 'candlestick',
+            name: 'Price',
+            xaxis: 'x',
+            yaxis: 'y'
+        };
+        
+        const layout = {
+            title: {
+                text: title,
+                font: { size: 16 }
+            },
+            dragmode: 'zoom',
+            margin: {
+                r: 10,
+                t: 50,
+                b: 60,
+                l: 70
+            },
+            showlegend: false,
+            xaxis: {
+                autorange: true,
+                title: 'Date',
+                type: 'date',
+                rangeslider: { visible: false }
+            },
+            yaxis: {
+                autorange: true,
+                title: 'Price',
+                side: 'left'
+            },
+            plot_bgcolor: '#fafbfc',
+            paper_bgcolor: 'white'
+        };
+        
+        const config = {
+            scrollZoom: true,
+            displayModeBar: true,
+            modeBarButtonsToAdd: [
+                'pan2d',
+                'zoomIn2d', 
+                'zoomOut2d', 
+                'autoScale2d',
+                'resetScale2d'
+            ],
+            responsive: true,
+            displaylogo: false
+        };
+        
+        // Clear previous chart
+        if (chartInstance) {
+            Plotly.purge('chart');
+        }
+        
+        chartInstance = Plotly.newPlot('chart', [trace], layout, config);
+        console.log('Chart updated successfully');
+        
+    } catch (error) {
+        console.error('Error loading chart data:', error);
+        document.getElementById('chart').innerHTML = '<div class="no-data"><h3>Error loading chart</h3><p>Please try again or check your data.</p></div>';
+    }
+}
+
+// Utility functions
+function showLoadingState(target) {
+    switch(target) {
+        case 'table':
+            document.getElementById('tableContent').innerHTML = '<div class="loading">Loading table data...</div>';
+            break;
+        case 'chart':
+            document.getElementById('chart').innerHTML = '<div class="loading">Loading chart...</div>';
+            break;
+        case 'instruments':
+            console.log('Loading instruments...');
+            break;
+    }
+}
+
+function showError(message) {
+    console.error(message);
+    // Create a simple toast notification
+    const toast = document.createElement('div');
+    toast.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #e74c3c;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 8px;
+        z-index: 1000;
+        font-weight: 500;
+        max-width: 400px;
+    `;
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    
+    setTimeout(() => {
+        if (document.body.contains(toast)) {
+            document.body.removeChild(toast);
+        }
+    }, 5000);
+}
+
+function showNoData() {
+    const startDate = document.getElementById('startDateInput').value;
+    const endDate = document.getElementById('endDateInput').value;
+    
+    document.getElementById('tableContent').innerHTML = `
+        <div class="no-data">
+            <h3>No data found</h3>
+            <p>No data available for the selected date range (${startDate} to ${endDate}).</p>
+            <p>Try adjusting your date range or check if the database contains data for this period.</p>
+            <button onclick="loadData()" class="btn-primary">Reload Data</button>
+        </div>
+    `;
+    document.getElementById('chart').innerHTML = `
+        <div class="no-data">
+            <h3>No chart data available</h3>
+            <p>No data available for the selected date range.</p>
+        </div>
+    `;
+}
+
+function updatePageTitle(instrument, recordCount, startDate, endDate) {
+    let title = 'Trading Data Viewer';
+    if (instrument) {
+        title += ` - ${instrument}`;
+    }
+    if (recordCount !== undefined) {
+        title += ` - ${recordCount} records`;
+    }
+    if (startDate && endDate) {
+        title += ` (${startDate} to ${endDate})`;
+    }
+    document.title = title;
+}
+
+// Download modal functions
+function showDownloadModal() {
+    const instrument = document.getElementById('instrumentSelect').value;
+    if (!instrument) {
+        showError('Please select an instrument first.');
+        return;
+    }
+    
+    document.getElementById('downloadModal').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeDownloadModal() {
+    document.getElementById('downloadModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+// Download data
+function downloadData() {
+    const instrument = document.getElementById('instrumentSelect').value;
+    const timeframe = document.getElementById('timeframeSelect').value;
+    const startDate = document.getElementById('startDateInput').value;
+    const endDate = document.getElementById('endDateInput').value;
+    
+    if (!instrument) {
+        showError('Please select an instrument first.');
+        return;
+    }
+    
+    if (!startDate || !endDate) {
+        showError('Please select both start and end dates.');
+        return;
+    }
+    
+    const params = new URLSearchParams({
+        format: selectedFormat,
+        timeframe: timeframe,
+        start_date: startDate,
+        end_date: endDate
+    });
+    
+    const url = `/download/${instrument}?${params}`;
+    console.log(`Downloading data: ${url}`);
+    
+    // Create a temporary link to trigger download
+    const link = document.createElement('a');
+    link.href = url;
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    closeDownloadModal();
+}
+
+// Table utility functions
+function refreshTable() {
+    loadData();
+}
+
+function exportTableToCSV() {
+    const table = document.getElementById('dataTable');
+    if (!table) {
+        console.error('Table not found');
+        return;
+    }
+    
+    const rows = table.querySelectorAll('tr');
+    const csvContent = [];
+    
+    rows.forEach(row => {
+        const cols = row.querySelectorAll('td, th');
+        const rowData = Array.from(cols).map(col => {
+            let data = col.textContent.trim();
+            // Escape quotes and wrap in quotes if contains comma
+            if (data.includes(',') || data.includes('"') || data.includes('\n')) {
+                data = '"' + data.replace(/"/g, '""') + '"';
+            }
+            return data;
+        });
+        csvContent.push(rowData.join(','));
+    });
+    
+    const csvString = csvContent.join('\n');
+    const blob = new Blob([csvString], { type: 'text/csv;charset=utf-8;' });
+    
+    // Create download link
+    const link = document.createElement('a');
+    if (link.download !== undefined) {
+        const url = URL.createObjectURL(blob);
+        link.setAttribute('href', url);
+        link.setAttribute('download', 'trading_data_table_export.csv');
+        link.style.visibility = 'hidden';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+    }
+}
+
+// Table sorting (basic implementation)
+let sortState = {};
+function sortTable(column) {
+    const table = document.getElementById('dataTable');
+    if (!table) return;
+    
+    const tbody = table.tBodies[0];
+    const rows = Array.from(tbody.rows);
+    
+    // Determine sort direction
+    const currentDirection = sortState[column] || 'asc';
+    const newDirection = currentDirection === 'asc' ? 'desc' : 'asc';
+    sortState[column] = newDirection;
+    
+    // Get column index
+    const headers = Array.from(table.querySelectorAll('th'));
+    const columnIndex = headers.findIndex(th => th.textContent.includes(column.replace(/_/g, ' ').toUpperCase()));
+    
+    if (columnIndex === -1) return;
+    
+    // Sort rows
+    rows.sort((a, b) => {
+        const aValue = a.cells[columnIndex].textContent.trim();
+        const bValue = b.cells[columnIndex].textContent.trim();
+        
+        // Try to parse as numbers first
+        const aNum = parseFloat(aValue.replace(/,/g, ''));
+        const bNum = parseFloat(bValue.replace(/,/g, ''));
+        
+        let comparison = 0;
+        if (!isNaN(aNum) && !isNaN(bNum)) {
+            comparison = aNum - bNum;
+        } else {
+            comparison = aValue.localeCompare(bValue, undefined, { numeric: true });
+        }
+        
+        return newDirection === 'asc' ? comparison : -comparison;
+    });
+    
+    // Re-append sorted rows
+    rows.forEach(row => tbody.appendChild(row));
+    
+    // Update sort indicators
+    headers.forEach((header, index) => {
+        const sortIcon = header.querySelector('.sort-icon');
+        if (sortIcon) {
+            if (index === columnIndex) {
+                sortIcon.textContent = newDirection === 'asc' ? ' ↑' : ' ↓';
+                sortIcon.style.color = '#007bff';
+            } else {
+                sortIcon.textContent = ' ↕';
+                sortIcon.style.color = '#ccc';
+            }
+        }
+    });
+    
+    console.log(`Sorted table by ${column} in ${newDirection} order`);
+}
+
+// Performance monitoring
+if ('performance' in window) {
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            const perfData = performance.getEntriesByType('navigation')[0];
+            console.log(`Page load time: ${Math.round(perfData.loadEventEnd - perfData.fetchStart)}ms`);
+        }, 0);
+    });
+}

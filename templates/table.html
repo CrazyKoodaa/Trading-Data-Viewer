@@ -1,0 +1,154 @@
+<div class="table-wrapper">
+    {% if data %}
+    <table id="dataTable">
+        <thead id="tableHead">
+            <tr>
+                {% for header in headers %}
+                <th>{{ header.replace('_', ' ').title() }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            {% for row in data %}
+            <tr>
+                {% for header in headers %}
+                <td>{{ row[header] if row[header] is not none else '' }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <div class="table-footer">
+        <div class="table-info">
+            Showing {{ data|length }} records
+            {% if instrument %}
+            for instrument: <strong>{{ instrument }}</strong>
+            {% endif %}
+        </div>
+        
+        <div class="table-actions">
+            <button onclick="exportTableToCSV()" class="btn-small">Export CSV</button>
+            <button onclick="refreshTable()" class="btn-small">Refresh</button>
+        </div>
+    </div>
+    
+    {% else %}
+    <div class="no-data">
+        <h3>No data found</h3>
+        <p>Try adjusting your filters or check if the database contains data.</p>
+        <button onclick="loadData()" class="btn-primary">Reload Data</button>
+    </div>
+    {% endif %}
+</div>
+
+{% if data %}
+<script>
+    // Add table-specific functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add sorting functionality
+        const headers = document.querySelectorAll('#dataTable th');
+        headers.forEach((header, index) => {
+            header.style.cursor = 'pointer';
+            header.addEventListener('click', () => sortTable(index));
+            
+            // Add sort indicator
+            const sortIcon = document.createElement('span');
+            sortIcon.className = 'sort-icon';
+            sortIcon.innerHTML = ' ↕';
+            header.appendChild(sortIcon);
+        });
+        
+        // Add row hover effect with data preview
+        const rows = document.querySelectorAll('#dataTable tbody tr');
+        rows.forEach(row => {
+            row.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = '#f0f8ff';
+            });
+            
+            row.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = '';
+            });
+        });
+    });
+    
+    // Table sorting function
+    let sortDirection = {};
+    function sortTable(columnIndex) {
+        const table = document.getElementById('dataTable');
+        const tbody = table.tBodies[0];
+        const rows = Array.from(tbody.rows);
+        
+        // Determine sort direction
+        const currentDirection = sortDirection[columnIndex] || 'asc';
+        const newDirection = currentDirection === 'asc' ? 'desc' : 'asc';
+        sortDirection[columnIndex] = newDirection;
+        
+        // Sort rows
+        rows.sort((a, b) => {
+            const aValue = a.cells[columnIndex].textContent.trim();
+            const bValue = b.cells[columnIndex].textContent.trim();
+            
+            // Try to parse as numbers
+            const aNum = parseFloat(aValue);
+            const bNum = parseFloat(bValue);
+            
+            let comparison = 0;
+            if (!isNaN(aNum) && !isNaN(bNum)) {
+                comparison = aNum - bNum;
+            } else {
+                comparison = aValue.localeCompare(bValue);
+            }
+            
+            return newDirection === 'asc' ? comparison : -comparison;
+        });
+        
+        // Re-append sorted rows
+        rows.forEach(row => tbody.appendChild(row));
+        
+        // Update sort indicators
+        const headers = table.querySelectorAll('th .sort-icon');
+        headers.forEach((icon, index) => {
+            if (index === columnIndex) {
+                icon.innerHTML = newDirection === 'asc' ? ' ↑' : ' ↓';
+                icon.style.color = '#007bff';
+            } else {
+                icon.innerHTML = ' ↕';
+                icon.style.color = '#ccc';
+            }
+        });
+    }
+    
+    // Export table to CSV
+    function exportTableToCSV() {
+        const table = document.getElementById('dataTable');
+        const rows = table.querySelectorAll('tr');
+        const csvContent = [];
+        
+        rows.forEach(row => {
+            const cols = row.querySelectorAll('td, th');
+            const rowData = Array.from(cols).map(col => {
+                let data = col.textContent.trim();
+                // Escape quotes and wrap in quotes if contains comma
+                if (data.includes(',') || data.includes('"')) {
+                    data = '"' + data.replace(/"/g, '""') + '"';
+                }
+                return data;
+            });
+            csvContent.push(rowData.join(','));
+        });
+        
+        const csvString = csvContent.join('\n');
+        const blob = new Blob([csvString], { type: 'text/csv' });
+        const url = window.URL.createObjectURL(blob);
+        
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'trading_data_table.csv';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+    }
+</script>
+{% endif %}

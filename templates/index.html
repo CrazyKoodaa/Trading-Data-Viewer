@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Trading Data Viewer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Trading Data Viewer</h1>
+    </div>
+
+    <div class="container">
+        <div class="controls">
+            <div class="controls-row">
+                <div class="control-group">
+                    <label>Instrument</label>
+                    <select id="instrumentSelect">
+                        <option value="">Loading instruments...</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label>Timeframe</label>
+                    <select id="timeframeSelect">
+                        <option value="raw">Raw Data</option>
+                        <option value="1min">1 Minute</option>
+                        <option value="5min">5 Minutes</option>
+                        <option value="15min">15 Minutes</option>
+                        <option value="30min">30 Minutes</option>
+                        <option value="60min">1 Hour</option>
+                        <option value="120min">2 Hours</option>
+                        <option value="240min">4 Hours</option>
+                        <option value="1day">Daily</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label>Start Date</label>
+                    <input type="date" id="startDate">
+                </div>
+
+                <div class="control-group">
+                    <label>End Date</label>
+                    <input type="date" id="endDate">
+                </div>
+
+                <div class="control-group">
+                    <label>&nbsp;</label>
+                    <button id="loadDataBtn">Load Data</button>
+                </div>
+
+                <div class="control-group">
+                    <label>&nbsp;</label>
+                    <button id="downloadBtn" class="download-btn">Download Data</button>
+                </div>
+
+                <div class="control-group">
+                    <label>Layout</label>
+                    <select id="layoutSelect">
+                        <option value="1">Single Chart</option>
+                        <option value="2">Dual Charts</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label>Drawing Tools</label>
+                    <div class="drawing-tools">
+                        <button id="hLineBtn" class="tool-btn" title="Horizontal Line">─</button>
+                        <button id="hRayBtn" class="tool-btn" title="Horizontal Ray">→</button>
+                        <button id="rectBtn" class="tool-btn" title="Rectangle">▭</button>
+                        <button id="clearBtn" class="tool-btn" title="Clear All">✖</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label>Saved Drawings</label>
+                    <div class="drawing-saves">
+                        <select id="savedDrawingsSelect">
+                            <option value="">Load saved drawings...</option>
+                        </select>
+                        <button id="saveDrawingsBtn" class="btn-small">Save</button>
+                        <button id="deleteDrawingsBtn" class="btn-small">Delete</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label>Technical Analysis</label>
+                    <div class="analysis-controls">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="supportResistanceToggle">
+                            Support/Resistance
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="trendChannelToggle">
+                            Trend Channel
+                        </label>
+                        <label class="checkbox-label" id="breakoutSignalsLabel" style="opacity: 0.5;">
+                            <input type="checkbox" id="breakoutSignalsToggle" disabled>
+                            Breakout Signals
+                        </label>
+                    </div>
+                </div>
+
+                <div class="control-group" id="instrument2Group" style="display: none;">
+                    <label>Instrument 2</label>
+                    <select id="instrumentSelect2">
+                        <option value="">Select second instrument...</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <div id="chartTitle" class="chart-title">
+                Select an instrument to view chart
+            </div>
+            <div id="chart" style="height: 600px;"></div>
+        </div>
+
+        <div class="table-container">
+            <div class="table-title">Trading Data</div>
+            <div id="tableContent"></div>
+        </div>
+    </div>
+
+    <!-- Download Modal -->
+    <div id="downloadModal" class="download-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Download Data</h3>
+                <span class="close" onclick="closeDownloadModal()">&times;</span>
+            </div>
+            <div class="format-options">
+                <div class="format-option selected" format="csv">
+                    <strong>CSV</strong>
+                    <small>Comma-separated values</small>
+                </div>
+                <div class="format-option" format="json">
+                    <strong>JSON</strong>
+                    <small>JavaScript Object Notation</small>
+                </div>
+            </div>
+            <button id="confirmDownload">Download</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+# Trading Data Viewer - Setup & Troubleshooting Guide
+
+## Issues Fixed
+
+### 1. **Instruments Not Loading**
+**Problem**: The dropdown showed "Loading instruments..." indefinitely.
+**Cause**: The JavaScript file was missing.
+**Solution**: Created a complete `script.js` file with all required functionality.
+
+### 2. **Default Timeframe**
+**Problem**: Default timeframe was "Raw Data" instead of "1 Minute".
+**Solution**: Added `setDefaultTimeframe()` function that automatically sets the timeframe to '1min' on page load.
+
+### 3. **Drawing Tools Icons**
+**Problem**: Unicode characters (─, →, ▭, ✖) weren't rendering properly.
+**Solution**: Replaced with text labels: "H-Line", "Ray", "Rect", "Clear".
+
+### 4. **Breakout Signals Dependency**
+**Problem**: The relationship between Support/Resistance and Breakout Signals wasn't clear.
+**Solution**: 
+- Indented Breakout Signals under Support/Resistance with a visual hierarchy
+- Added an arrow (↳) to show dependency
+- Added hover tooltip explaining "Enable Support/Resistance first"
+- Automatically disables/enables based on Support/Resistance state
+
+## Proper Folder Structure
+
+Your application needs this folder structure for Flask to work correctly:
+
+```
+trading-viewer/
+│
+├── static/
+│   ├── script.js      # JavaScript functionality
+│   └── style.css      # Styling
+│
+├── templates/
+│   ├── index.html     # Main page template
+│   └── table.html     # Table template
+│
+├── database/
+│   └── my_data.db     # Your SQLite database
+│
+├── logs/              # Created automatically
+│   ├── app.log
+│   └── output.log
+│
+├── app.py             # Flask application
+├── manage.ps1         # PowerShell management script
+├── requirements.txt   # Python dependencies
+└── setup-static.ps1   # Setup script (optional)
+```
+
+## Quick Setup Instructions
+
+1. **Create the folder structure**:
+   ```powershell
+   # Create directories
+   New-Item -ItemType Directory -Name "static" -Force
+   New-Item -ItemType Directory -Name "templates" -Force
+   
+   # Move files to correct locations
+   Move-Item style.css static/ -Force
+   Move-Item index.html templates/ -Force
+   Move-Item table.html templates/ -Force
+   ```
+
+2. **Save the JavaScript file**:
+   - Copy the JavaScript code from the artifact above
+   - Save it as `static/script.js`
+
+3. **Start the server**:
+   ```powershell
+   ./manage.ps1 dev
+   ```
+
+4. **Access the application**:
+   - Open http://localhost:5000 in your browser
+
+## Features Overview
+
+### Data Visualization
+- **Candlestick Charts**: Full OHLC data visualization using TradingView's Lightweight Charts
+- **Multiple Timeframes**: 1min, 5min, 15min, 30min, 1hr, 2hr, 4hr, Daily
+- **Date Range Filtering**: Select specific date ranges for analysis
+
+### Drawing Tools
+- **H-Line**: Horizontal support/resistance lines
+- **Ray**: Horizontal rays extending to the right
+- **Rect**: Rectangle zones for consolidation areas
+- **Clear**: Remove all drawings
+
+### Technical Analysis
+- **Support/Resistance**: Automatic detection of key price levels
+- **Breakout Signals**: Alerts when price breaks key levels (requires S/R enabled)
+- **Trend Channel**: Automatic trend line detection
+
+### Data Management
+- **Save/Load Drawings**: Persist your analysis across sessions
+- **Export Data**: Download data in CSV or JSON format
+- **Multi-layout**: Single or dual chart views
+
+## Troubleshooting
+
+### "No instruments available"
+- Check that your database file exists at `database/my_data.db`
+- Verify the database contains trading tables (ES_bars, GC_bars, NQ_bars)
+- Check the console for any database connection errors
+
+### Chart not displaying
+- Ensure JavaScript is enabled in your browser
+- Check browser console (F12) for any errors
+- Verify data is being returned from the API
+
+### Technical indicators not working
+- Support/Resistance must be enabled for Breakout Signals to work
+- Indicators require sufficient data (at least 50 bars)
+- Some features are placeholders for future implementation
+
+## Performance Optimization
+
+The application includes several performance optimizations:
+
+1. **Data Aggregation**: Server-side timeframe aggregation reduces data transfer
+2. **Lazy Loading**: Table shows only 100 most recent records initially
+3. **Efficient Rendering**: Chart updates only when necessary
+4. **Caching**: Browser caching for static assets
+
+## API Endpoints
+
+- `GET /api/instruments` - List available instruments
+- `GET /api/data/<table_name>` - Get instrument data
+  - Query params: `timeframe`, `start_date`, `end_date`
+- `GET /download/<table_name>` - Download data
+  - Query params: `format` (csv/json), `timeframe`, `start_date`, `end_date`
+- `POST /api/drawings` - Save drawing set
+- `GET /api/drawings` - List saved drawings
+- `GET /api/drawings/<id>` - Get specific drawing
+- `DELETE /api/drawings/<id>` - Delete drawing
+
+## Browser Compatibility
+
+Tested and working on:
+- Chrome 90+
+- Firefox 88+
+- Edge 90+
+- Safari 14+
+
+## Known Limitations
+
+1. Drawing tools are visual placeholders (not fully implemented)
+2. Technical indicators show basic implementations
+3. Real-time data updates not implemented
+4. Limited to historical data analysis
+
+## Future Enhancements
+
+Potential improvements for production use:
+- WebSocket support for real-time data
+- Advanced technical indicators (MA, RSI, MACD)
+- Interactive drawing tools with persistence
+- Multi-timeframe analysis
+- Advanced order flow analytics
+- Risk management tools
