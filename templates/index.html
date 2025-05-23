@@ -6,6 +6,17 @@
     <title>Advanced Trading Data Viewer</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <!-- Fallback to local version if CDN fails -->
+    <script>
+        window.addEventListener('error', function(e) {
+            if (e.target.src && e.target.src.includes('unpkg.com/lightweight-charts')) {
+                console.log('CDN load failed, using local version');
+                const script = document.createElement('script');
+                script.src = "{{ url_for('static', filename='lightweight-charts.standalone.production.js') }}";
+                document.head.appendChild(script);
+            }
+        }, true);
+    </script>
 </head>
 <body>
     <div class="header">
@@ -13,7 +24,9 @@
     </div>
 
     <div class="container">
+        <!-- First desk - Essential controls -->
         <div class="controls">
+            <!-- First row - Main controls -->
             <div class="controls-row">
                 <div class="control-group">
                     <label>Instrument</label>
@@ -26,7 +39,7 @@
                     <label>Timeframe</label>
                     <select id="timeframeSelect">
                         <option value="raw">Raw Data</option>
-                        <option value="1min">1 Minute</option>
+                        <option value="1min" selected>1 Minute</option>
                         <option value="5min">5 Minutes</option>
                         <option value="15min">15 Minutes</option>
                         <option value="30min">30 Minutes</option>
@@ -39,32 +52,51 @@
 
                 <div class="control-group">
                     <label>Start Date</label>
-                    <input type="date" id="startDate">
+                    <input type="date" id="startDateInput">
                 </div>
 
                 <div class="control-group">
                     <label>End Date</label>
-                    <input type="date" id="endDate">
+                    <input type="date" id="endDateInput">
                 </div>
 
                 <div class="control-group">
                     <label>&nbsp;</label>
-                    <button id="loadDataBtn">Load Data</button>
+                    <button id="addInstrumentBtn" class="btn-small" title="Add Second Instrument">
+                        <span style="font-size: 14px;">+</span> Add Chart
+                    </button>
                 </div>
-
-                <div class="control-group">
-                    <label>&nbsp;</label>
-                    <button id="downloadBtn" class="download-btn">Download Data</button>
-                </div>
-
-                <div class="control-group">
-                    <label>Layout</label>
-                    <select id="layoutSelect">
-                        <option value="1">Single Chart</option>
-                        <option value="2">Dual Charts</option>
+            </div>
+            
+            <!-- Second row - Second instrument (initially hidden) -->
+            <div id="instrument2Row" class="controls-row" style="display: none; margin-top: 15px; border-top: 1px dashed #e5e7eb; padding-top: 15px;">
+                <div class="control-group" id="instrument2Group">
+                    <label>Instrument 2</label>
+                    <select id="instrumentSelect2">
+                        <option value="">Select second instrument...</option>
                     </select>
                 </div>
-
+                
+                <div class="control-group">
+                    <label>&nbsp;</label>
+                    <button id="removeInstrumentBtn" class="btn-small" title="Remove Second Instrument">
+                        <span style="font-size: 14px;">-</span> Delete Chart
+                    </button>
+                </div>
+                
+                <div class="control-group" id="syncTimeGroup">
+                    <label>Chart Options</label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="syncTimeToggle">
+                        Sync Time Scales
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Second desk - Drawing tools and analysis -->
+        <div class="controls drawing-controls-panel">
+            <div class="controls-row">
                 <div class="control-group">
                     <label>Drawing Tools</label>
                     <div class="drawing-tools">
@@ -89,26 +121,21 @@
                 <div class="control-group">
                     <label>Technical Analysis</label>
                     <div class="analysis-controls">
-                        <label class="checkbox-label">
-                            <input type="checkbox" id="supportResistanceToggle">
-                            Support/Resistance
-                        </label>
+                        <div class="analysis-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="supportResistanceToggle">
+                                Support/Resistance
+                            </label>
+                            <label class="checkbox-label sub-option" id="breakoutSignalsLabel" style="opacity: 0.5; margin-left: 20px;">
+                                <input type="checkbox" id="breakoutSignalsToggle" disabled>
+                                Breakout Signals
+                            </label>
+                        </div>
                         <label class="checkbox-label">
                             <input type="checkbox" id="trendChannelToggle">
                             Trend Channel
                         </label>
-                        <label class="checkbox-label" id="breakoutSignalsLabel" style="opacity: 0.5;">
-                            <input type="checkbox" id="breakoutSignalsToggle" disabled>
-                            Breakout Signals
-                        </label>
                     </div>
-                </div>
-
-                <div class="control-group" id="instrument2Group" style="display: none;">
-                    <label>Instrument 2</label>
-                    <select id="instrumentSelect2">
-                        <option value="">Select second instrument...</option>
-                    </select>
                 </div>
             </div>
         </div>
@@ -117,7 +144,11 @@
             <div id="chartTitle" class="chart-title">
                 Select an instrument to view chart
             </div>
-            <div id="chart" style="height: 600px;"></div>
+            <div id="chart" style="min-height: 600px; display: flex; flex-wrap: wrap;"></div>
+            <div class="chart-footer">
+                <button id="loadDataBtn" class="btn-primary">Refresh Data</button>
+                <button id="downloadBtn" class="download-btn">Download Data</button>
+            </div>
         </div>
 
         <div class="table-container">
@@ -134,11 +165,11 @@
                 <span class="close" onclick="closeDownloadModal()">&times;</span>
             </div>
             <div class="format-options">
-                <div class="format-option selected" format="csv">
+                <div class="format-option selected" data-format="csv">
                     <strong>CSV</strong>
                     <small>Comma-separated values</small>
                 </div>
-                <div class="format-option" format="json">
+                <div class="format-option" data-format="json">
                     <strong>JSON</strong>
                     <small>JavaScript Object Notation</small>
                 </div>

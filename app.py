@@ -4,7 +4,7 @@ import sqlite3
 import json
 import io
 import csv
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 import os
 import threading
 from functools import wraps, lru_cache
@@ -220,8 +220,8 @@ def detect_trading_tables() -> Tuple[Dict[str, Any], ...]:
         return tuple()
 
 def aggregate_timeframe_data(table_name: str, timeframe: str, start_date: Optional[str] = None, 
-                           end_date: Optional[str] = None, limit: int = MAX_DATA_POINTS) -> List[Dict[str, Any]]:
-    """Optimized data aggregation with limits and better performance"""
+                           end_date: Optional[str] = None, limit: int = 500, offset: int = 0) -> Tuple[List[Dict[str, Any]], int]:
+    """Optimized data aggregation with pagination support"""
     
     intervals = {
         '1min': 1, '5min': 5, '15min': 15, '30min': 30,
@@ -247,6 +247,30 @@ def aggregate_timeframe_data(table_name: str, timeframe: str, start_date: Option
     
     where_clause = " AND ".join(date_conditions) if date_conditions else "1=1"
     
+    # First, get the total count for pagination info
+    if interval_minutes == 1440:  # Daily aggregation
+        count_query = f"""
+            SELECT COUNT(DISTINCT DATE(bar_end_datetime)) as count
+            FROM [{table_name}]
+            WHERE {where_clause}
+        """
+    else:
+        # For minute-based timeframes, count the distinct time groups
+        count_query = f"""
+            SELECT COUNT(DISTINCT datetime(
+                strftime('%Y-%m-%d %H:', bar_end_datetime) || 
+                printf('%02d', (CAST(strftime('%M', bar_end_datetime) as INTEGER) / {interval_minutes}) * {interval_minutes}) || 
+                ':00'
+            )) as count
+            FROM [{table_name}]
+            WHERE {where_clause}
+        """
+    
+    with db_manager.get_connection() as conn:
+        cursor = conn.execute(count_query, params.copy())
+        total_count = cursor.fetchone()['count']
+    
+    # Now get the actual data with pagination
     if interval_minutes == 1440:  # Daily aggregation
         query = f"""
             WITH ordered_data AS (
@@ -258,23 +282,27 @@ def aggregate_timeframe_data(table_name: str, timeframe: str, start_date: Option
                     ROW_NUMBER() OVER (PARTITION BY DATE(bar_end_datetime) ORDER BY bar_end_datetime DESC) as rn_last
                 FROM [{table_name}]
                 WHERE {where_clause}
+            ),
+            aggregated AS (
+                SELECT 
+                    period,
+                    AVG(CASE WHEN rn_first = 1 THEN open_price END) as open_price,
+                    MAX(high_price) as high_price,
+                    MIN(low_price) as low_price,
+                    AVG(CASE WHEN rn_last = 1 THEN close_price END) as close_price,
+                    SUM(CAST(volume as INTEGER)) as volume,
+                    COUNT(*) as bar_count
+                FROM ordered_data
+                GROUP BY period
+                ORDER BY period DESC
             )
-            SELECT 
-                period,
-                AVG(CASE WHEN rn_first = 1 THEN open_price END) as open_price,
-                MAX(high_price) as high_price,
-                MIN(low_price) as low_price,
-                AVG(CASE WHEN rn_last = 1 THEN close_price END) as close_price,
-                SUM(CAST(volume as INTEGER)) as volume,
-                COUNT(*) as bar_count
-            FROM ordered_data
-            GROUP BY period
-            ORDER BY period ASC
-            LIMIT ?
+            SELECT * FROM aggregated
+            LIMIT ? OFFSET ?
         """
         params.append(limit)
+        params.append(offset)
     else:
-        # Minute-based aggregation with optimized grouping
+        # Minute-based aggregation with optimized grouping and pagination
         query = f"""
             WITH time_groups AS (
                 SELECT 
@@ -297,21 +325,25 @@ def aggregate_timeframe_data(table_name: str, timeframe: str, start_date: Option
                     ) ORDER BY bar_end_datetime DESC) as rn_last
                 FROM [{table_name}]
                 WHERE {where_clause}
+            ),
+            aggregated AS (
+                SELECT 
+                    period,
+                    AVG(CASE WHEN rn_first = 1 THEN open_price END) as open_price,
+                    MAX(high_price) as high_price,
+                    MIN(low_price) as low_price,
+                    AVG(CASE WHEN rn_last = 1 THEN close_price END) as close_price,
+                    SUM(CAST(volume as INTEGER)) as volume,
+                    COUNT(*) as bar_count
+                FROM time_groups
+                GROUP BY period
+                ORDER BY period DESC
             )
-            SELECT 
-                period,
-                AVG(CASE WHEN rn_first = 1 THEN open_price END) as open_price,
-                MAX(high_price) as high_price,
-                MIN(low_price) as low_price,
-                AVG(CASE WHEN rn_last = 1 THEN close_price END) as close_price,
-                SUM(CAST(volume as INTEGER)) as volume,
-                COUNT(*) as bar_count
-            FROM time_groups
-            GROUP BY period
-            ORDER BY period ASC
-            LIMIT ?
+            SELECT * FROM aggregated
+            LIMIT ? OFFSET ?
         """
         params.append(limit)
+        params.append(offset)
     
     with db_manager.get_connection() as conn:
         cursor = conn.execute(query, params)
@@ -329,7 +361,7 @@ def aggregate_timeframe_data(table_name: str, timeframe: str, start_date: Option
             'bar_count': row['bar_count']
         })
     
-    return data
+    return data, total_count
 
 def create_drawings_table():
     """Create the saved_drawings table with proper indexing"""
@@ -379,7 +411,12 @@ def get_instruments() -> Response:
 @app.route('/api/data/<table_name>')
 @handle_db_errors
 def get_data(table_name: str) -> Union[Response, Tuple[Response, int]]:
-    """Get data from a specific table with enhanced validation and limits"""
+    """Get data from a specific table with enhanced validation and limits
+    
+    Note: Data is returned in descending order (newest first) to optimize for
+    displaying the most recent data first. The client-side code will sort it
+    as needed for chart display.
+    """
     logger.info(f"Data API endpoint called for table: {table_name}")
     
     # Validate table name to prevent SQL injection
@@ -395,13 +432,30 @@ def get_data(table_name: str) -> Union[Response, Tuple[Response, int]]:
         if not cursor.fetchone():
             return jsonify({'error': f'Table {table_name} not found'}), 404
     
+    # Set default values for parameters
     timeframe = request.args.get('timeframe', '1min')
+    
+    # Default start_date to 2 weeks ago if not provided
     start_date = request.args.get('start_date')
+    if not start_date:
+        two_weeks_ago = datetime.now() - timedelta(days=14)
+        start_date = two_weeks_ago.strftime('%Y-%m-%d')
+    
+    # Default end_date to today if not provided
     end_date = request.args.get('end_date')
-    limit = min(int(request.args.get('limit', MAX_DATA_POINTS)), MAX_DATA_POINTS)
+    if not end_date:
+        end_date = datetime.now().strftime('%Y-%m-%d')
+    
+    # Progressive loading parameters
+    limit = min(int(request.args.get('limit', 500)), MAX_DATA_POINTS)
+    offset = int(request.args.get('offset', 0))
+    
+    # Get total count for pagination info
+    total_count = 0
+    has_more = False
     
     logger.info(f"Query parameters: table={table_name}, timeframe={timeframe}, "
-                f"start_date={start_date}, end_date={end_date}, limit={limit}")
+                f"start_date={start_date}, end_date={end_date}, limit={limit}, offset={offset}")
     
     try:
         if timeframe == 'raw':
@@ -419,14 +473,27 @@ def get_data(table_name: str) -> Union[Response, Tuple[Response, int]]:
             
             where_clause = " AND ".join(date_conditions) if date_conditions else "1=1"
             
+            # Get total count first
+            count_query = f"""
+                SELECT COUNT(*) as count
+                FROM [{table_name}] 
+                WHERE {where_clause}
+            """
+            
+            with db_manager.get_connection() as conn:
+                cursor = conn.execute(count_query, params)
+                total_count = cursor.fetchone()['count']
+            
+            # Then get the actual data with pagination - newest first
             query = f"""
                 SELECT bar_end_datetime, open_price, high_price, low_price, close_price, volume
                 FROM [{table_name}] 
                 WHERE {where_clause}
-                ORDER BY bar_end_datetime ASC
-                LIMIT ?
+                ORDER BY bar_end_datetime DESC
+                LIMIT ? OFFSET ?
             """
             params.append(limit)
+            params.append(offset)
             
             with db_manager.get_connection() as conn:
                 cursor = conn.execute(query, params)
@@ -442,11 +509,27 @@ def get_data(table_name: str) -> Union[Response, Tuple[Response, int]]:
                     'close': float(row['close_price']) if row['close_price'] else 0,
                     'volume': int(row['volume']) if row['volume'] else 0
                 })
+            
+            has_more = (offset + len(data)) < total_count
         else:
-            data = aggregate_timeframe_data(table_name, timeframe, start_date, end_date, limit)
+            # For aggregated timeframes, we'll modify the function to support pagination
+            data, total_count = aggregate_timeframe_data(table_name, timeframe, start_date, end_date, limit, offset)
+            has_more = (offset + len(data)) < total_count
         
-        logger.info(f"Returning {len(data)} data points for {timeframe} timeframe")
-        response = jsonify(data)
+        logger.info(f"Returning {len(data)} data points for {timeframe} timeframe (offset: {offset}, total: {total_count})")
+        
+        # Return data with pagination metadata
+        response_data = {
+            'data': data,
+            'pagination': {
+                'offset': offset,
+                'limit': limit,
+                'total': total_count,
+                'has_more': has_more
+            }
+        }
+        
+        response = jsonify(response_data)
         response.headers['Cache-Control'] = 'public, max-age=300'  # Cache for 5 minutes
         return response
         
@@ -594,7 +677,11 @@ def delete_drawing(drawing_id: int) -> Union[Response, Tuple[Response, int]]:
 @app.route('/download/<table_name>')
 @handle_db_errors
 def download_data(table_name: str) -> Union[Response, Tuple[Response, int]]:
-    """Download data with format validation and limits"""
+    """Download data with format validation and limits
+    
+    Note: Data is returned in descending order (newest first) to prioritize
+    the most recent data in downloads.
+    """
     # Validate table name
     if not table_name.replace('_', '').replace('-', '').isalnum():
         return jsonify({'error': 'Invalid table name format'}), 400
@@ -603,9 +690,20 @@ def download_data(table_name: str) -> Union[Response, Tuple[Response, int]]:
     if format_type not in ['csv', 'json']:
         return jsonify({'error': 'Unsupported format. Use csv or json'}), 400
     
+    # Set default values for parameters
     timeframe = request.args.get('timeframe', '1min')
+    
+    # Default start_date to 2 weeks ago if not provided
     start_date = request.args.get('start_date')
+    if not start_date:
+        two_weeks_ago = datetime.now() - timedelta(days=14)
+        start_date = two_weeks_ago.strftime('%Y-%m-%d')
+    
+    # Default end_date to today if not provided
     end_date = request.args.get('end_date')
+    if not end_date:
+        end_date = datetime.now().strftime('%Y-%m-%d')
+    
     limit = min(int(request.args.get('limit', MAX_DATA_POINTS)), MAX_DATA_POINTS)
     
     logger.info(f"Download requested: table={table_name}, format={format_type}, "
@@ -635,7 +733,7 @@ def download_data(table_name: str) -> Union[Response, Tuple[Response, int]]:
             
             where_clause = " AND ".join(date_conditions) if date_conditions else "1=1"
             
-            query = f"SELECT * FROM [{table_name}] WHERE {where_clause} ORDER BY bar_end_datetime ASC LIMIT ?"
+            query = f"SELECT * FROM [{table_name}] WHERE {where_clause} ORDER BY bar_end_datetime DESC LIMIT ?"
             params.append(limit)
             
             with db_manager.get_connection() as conn:
@@ -696,9 +794,13 @@ def download_data(table_name: str) -> Union[Response, Tuple[Response, int]]:
             }
         )
         return response
+        
+    # This should never be reached due to format validation at the beginning,
+    # but adding a default return to satisfy the type checker
+    return jsonify({'error': 'Unsupported format'}), 400
 
 @app.route('/health')
-def health_check() -> Response:
+def health_check() -> Union[Response, Tuple[Response, int]]:
     """Enhanced health check with database connectivity and performance metrics"""
     start_time = time.time()
     

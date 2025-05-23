@@ -1,0 +1,1383 @@
+2025-05-23 11:55:26,884 - __main__ - INFO - [app.py:763] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 11:55:26,888 - __main__ - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 11:55:36,513 - app - INFO - [app.py:763] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 11:55:36,518 - app - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 11:55:40,550 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 11:55:40,550 - app - INFO - [app.py:775] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 11:55:40,551 - app - INFO - [app.py:777] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 11:55:40,551 - app - INFO - [app.py:777] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 11:55:40,551 - app - INFO - [app.py:777] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 11:55:40,552 - app - INFO - [app.py:781] - [SUCCESS] Application initialized successfully!
+2025-05-23 11:55:40,555 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 11:55:44,622 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 11:55:58,056 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 11:55:58,057 - app - INFO - [app.py:403] - Query parameters: table=NQ_bars, timeframe=5min, start_date=None, end_date=None, limit=50000
+2025-05-23 11:56:09,318 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 11:56:10,207 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 11:56:11,050 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 11:56:13,743 - app - INFO - [app.py:448] - Returning 23481 data points for 5min timeframe
+2025-05-23 12:02:35,976 - app - INFO - [app.py:785] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 12:02:35,984 - app - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 12:02:36,632 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 12:02:36,632 - app - INFO - [app.py:797] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 12:02:36,632 - app - INFO - [app.py:799] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 12:02:36,632 - app - INFO - [app.py:799] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 12:02:36,632 - app - INFO - [app.py:799] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 12:02:36,632 - app - INFO - [app.py:803] - [SUCCESS] Application initialized successfully!
+2025-05-23 12:02:42,587 - app - INFO - [app.py:785] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 12:02:42,589 - app - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 12:02:43,223 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 12:02:43,224 - app - INFO - [app.py:797] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 12:02:43,224 - app - INFO - [app.py:799] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 12:02:43,224 - app - INFO - [app.py:799] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 12:02:43,224 - app - INFO - [app.py:799] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 12:02:43,224 - app - INFO - [app.py:803] - [SUCCESS] Application initialized successfully!
+2025-05-23 12:03:04,085 - app - INFO - [app.py:785] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 12:03:04,090 - app - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 12:03:04,731 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 12:03:04,732 - app - INFO - [app.py:797] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 12:03:04,732 - app - INFO - [app.py:799] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 12:03:04,732 - app - INFO - [app.py:799] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 12:03:04,732 - app - INFO - [app.py:799] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 12:03:04,733 - app - INFO - [app.py:803] - [SUCCESS] Application initialized successfully!
+2025-05-23 12:03:04,748 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 12:03:08,538 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 12:03:14,170 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 12:03:14,171 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=raw, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 12:03:14,258 - app - INFO - [app.py:459] - Returning 50000 data points for raw timeframe
+2025-05-23 12:03:16,608 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 12:04:58,075 - app - INFO - [app.py:785] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 12:04:58,082 - app - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 12:04:58,728 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 12:04:58,728 - app - INFO - [app.py:797] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 12:04:58,729 - app - INFO - [app.py:799] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 12:04:58,729 - app - INFO - [app.py:799] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 12:04:58,729 - app - INFO - [app.py:799] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 12:04:58,729 - app - INFO - [app.py:803] - [SUCCESS] Application initialized successfully!
+2025-05-23 12:08:34,393 - app - INFO - [app.py:785] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 12:08:34,398 - app - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 12:08:35,032 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 12:08:35,033 - app - INFO - [app.py:797] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 12:08:35,033 - app - INFO - [app.py:799] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 12:08:35,033 - app - INFO - [app.py:799] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 12:08:35,033 - app - INFO - [app.py:799] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 12:08:35,033 - app - INFO - [app.py:803] - [SUCCESS] Application initialized successfully!
+2025-05-23 12:08:35,043 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 12:08:38,229 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 12:08:45,865 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 12:08:45,867 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 12:08:47,953 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 12:08:49,186 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 12:09:32,377 - app - INFO - [app.py:785] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 12:09:32,384 - app - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 12:09:33,030 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 12:09:33,030 - app - INFO - [app.py:797] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 12:09:33,030 - app - INFO - [app.py:799] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 12:09:33,031 - app - INFO - [app.py:799] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 12:09:33,031 - app - INFO - [app.py:799] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 12:09:33,031 - app - INFO - [app.py:803] - [SUCCESS] Application initialized successfully!
+2025-05-23 12:13:34,615 - app - INFO - [app.py:785] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 12:13:34,620 - app - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 12:13:35,256 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 12:13:35,256 - app - INFO - [app.py:797] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 12:13:35,256 - app - INFO - [app.py:799] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 12:13:35,257 - app - INFO - [app.py:799] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 12:13:35,257 - app - INFO - [app.py:799] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 12:13:35,257 - app - INFO - [app.py:803] - [SUCCESS] Application initialized successfully!
+2025-05-23 12:13:35,264 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 12:13:43,219 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 12:17:00,112 - app - INFO - [app.py:785] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 12:17:00,118 - app - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 12:17:03,799 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 12:17:03,799 - app - INFO - [app.py:797] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 12:17:03,799 - app - INFO - [app.py:799] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 12:17:03,799 - app - INFO - [app.py:799] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 12:17:03,799 - app - INFO - [app.py:799] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 12:17:03,800 - app - INFO - [app.py:803] - [SUCCESS] Application initialized successfully!
+2025-05-23 12:17:03,806 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 12:17:24,996 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 12:17:25,615 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 12:17:25,617 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 12:17:28,305 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 12:19:29,728 - app - INFO - [app.py:785] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 12:19:29,731 - app - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 12:19:30,370 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 12:19:30,370 - app - INFO - [app.py:797] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 12:19:30,371 - app - INFO - [app.py:799] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 12:19:30,371 - app - INFO - [app.py:799] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 12:19:30,371 - app - INFO - [app.py:799] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 12:19:30,371 - app - INFO - [app.py:803] - [SUCCESS] Application initialized successfully!
+2025-05-23 12:19:30,378 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 12:19:37,886 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 12:21:45,445 - app - INFO - [app.py:785] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 12:21:45,451 - app - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 12:21:49,186 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 12:21:49,186 - app - INFO - [app.py:797] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 12:21:49,186 - app - INFO - [app.py:799] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 12:21:49,186 - app - INFO - [app.py:799] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 12:21:49,186 - app - INFO - [app.py:799] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 12:21:49,186 - app - INFO - [app.py:803] - [SUCCESS] Application initialized successfully!
+2025-05-23 12:21:49,193 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 12:21:49,945 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 12:23:56,970 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 12:23:57,591 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 12:23:57,593 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 12:24:00,593 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 12:27:39,338 - app - INFO - [app.py:785] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 12:27:39,342 - app - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 12:27:39,995 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 12:27:39,995 - app - INFO - [app.py:797] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 12:27:39,996 - app - INFO - [app.py:799] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 12:27:39,996 - app - INFO - [app.py:799] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 12:27:39,996 - app - INFO - [app.py:799] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 12:27:39,996 - app - INFO - [app.py:803] - [SUCCESS] Application initialized successfully!
+2025-05-23 12:27:40,003 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 12:57:43,838 - app - INFO - [app.py:785] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 12:57:43,843 - app - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 12:57:47,434 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 12:57:47,434 - app - INFO - [app.py:797] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 12:57:47,434 - app - INFO - [app.py:799] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 12:57:47,435 - app - INFO - [app.py:799] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 12:57:47,435 - app - INFO - [app.py:799] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 12:57:47,435 - app - INFO - [app.py:803] - [SUCCESS] Application initialized successfully!
+2025-05-23 12:57:47,442 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 12:58:20,112 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 12:58:20,754 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 12:58:20,755 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 12:58:23,537 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 12:58:41,605 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 12:58:41,607 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 12:58:43,669 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 12:59:19,201 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 12:59:19,855 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 12:59:19,855 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 12:59:21,732 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 13:03:21,149 - app - INFO - [app.py:785] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 13:03:21,154 - app - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 13:03:21,860 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 13:03:21,861 - app - INFO - [app.py:797] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 13:03:21,861 - app - INFO - [app.py:799] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 13:03:21,861 - app - INFO - [app.py:799] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 13:03:21,861 - app - INFO - [app.py:799] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 13:03:21,861 - app - INFO - [app.py:803] - [SUCCESS] Application initialized successfully!
+2025-05-23 13:03:21,868 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 13:03:28,324 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 13:03:28,970 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:03:28,972 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:03:30,887 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 13:03:52,929 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:03:52,931 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=5min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:03:54,837 - app - INFO - [app.py:459] - Returning 2658 data points for 5min timeframe
+2025-05-23 13:04:08,180 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:04:08,182 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1day, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:04:09,373 - app - INFO - [app.py:459] - Returning 10 data points for 1day timeframe
+2025-05-23 13:04:40,093 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:04:40,095 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1day, start_date=2025-04-01, end_date=2025-05-23, limit=50000
+2025-05-23 13:04:47,332 - app - INFO - [app.py:459] - Returning 37 data points for 1day timeframe
+2025-05-23 13:05:12,409 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:05:12,409 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=5min, start_date=2025-04-01, end_date=2025-05-23, limit=50000
+2025-05-23 13:05:20,818 - app - INFO - [app.py:459] - Returning 10131 data points for 5min timeframe
+2025-05-23 13:11:03,619 - app - INFO - [app.py:785] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 13:11:03,623 - app - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 13:11:04,316 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 13:11:04,316 - app - INFO - [app.py:797] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 13:11:04,317 - app - INFO - [app.py:799] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 13:11:04,317 - app - INFO - [app.py:799] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 13:11:04,317 - app - INFO - [app.py:799] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 13:11:04,317 - app - INFO - [app.py:803] - [SUCCESS] Application initialized successfully!
+2025-05-23 13:11:04,324 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 13:11:09,777 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 13:11:10,431 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:11:10,432 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:11:12,349 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 13:13:58,208 - app - INFO - [app.py:383] - Data API endpoint called for table: ES_bars
+2025-05-23 13:13:58,212 - app - INFO - [app.py:414] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:14:00,745 - app - INFO - [app.py:459] - Returning 13248 data points for 1min timeframe
+2025-05-23 13:17:24,664 - app - INFO - [app.py:785] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 13:17:24,669 - app - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 13:17:25,368 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 13:17:25,368 - app - INFO - [app.py:797] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 13:17:25,368 - app - INFO - [app.py:799] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 13:17:25,368 - app - INFO - [app.py:799] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 13:17:25,368 - app - INFO - [app.py:799] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 13:17:25,369 - app - INFO - [app.py:803] - [SUCCESS] Application initialized successfully!
+2025-05-23 13:17:25,376 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 13:17:27,864 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 13:17:28,508 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:17:28,510 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:17:30,433 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 13:18:53,193 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 13:19:03,416 - app - INFO - [app.py:383] - Data API endpoint called for table: ES_bars
+2025-05-23 13:19:03,418 - app - INFO - [app.py:414] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:19:05,349 - app - INFO - [app.py:459] - Returning 13248 data points for 1min timeframe
+2025-05-23 13:25:53,599 - app - INFO - [app.py:785] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 13:25:53,603 - app - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 13:25:54,276 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 13:25:54,276 - app - INFO - [app.py:797] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 13:25:54,276 - app - INFO - [app.py:799] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 13:25:54,276 - app - INFO - [app.py:799] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 13:25:54,276 - app - INFO - [app.py:799] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 13:25:54,277 - app - INFO - [app.py:803] - [SUCCESS] Application initialized successfully!
+2025-05-23 13:25:54,288 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 13:25:57,044 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 13:25:57,684 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:25:57,685 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:25:59,593 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 13:26:05,116 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:26:05,118 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=5min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:26:07,109 - app - INFO - [app.py:459] - Returning 2658 data points for 5min timeframe
+2025-05-23 13:34:17,591 - app - INFO - [app.py:785] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 13:34:17,594 - app - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 13:34:18,233 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 13:34:18,233 - app - INFO - [app.py:797] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 13:34:18,233 - app - INFO - [app.py:799] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 13:34:18,233 - app - INFO - [app.py:799] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 13:34:18,233 - app - INFO - [app.py:799] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 13:34:18,233 - app - INFO - [app.py:803] - [SUCCESS] Application initialized successfully!
+2025-05-23 13:34:18,240 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 13:34:21,825 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 13:34:22,460 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:34:22,462 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:34:24,386 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 13:36:17,889 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:36:17,890 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:36:19,894 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     2025-05-23 13:40:29,790 - app - INFO - [app.py:785] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 13:40:29,795 - app - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 13:40:33,480 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 13:40:33,480 - app - INFO - [app.py:797] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 13:40:33,481 - app - INFO - [app.py:799] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 13:40:33,481 - app - INFO - [app.py:799] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 13:40:33,481 - app - INFO - [app.py:799] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 13:40:33,481 - app - INFO - [app.py:803] - [SUCCESS] Application initialized successfully!
+2025-05-23 13:40:33,489 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 13:40:33,681 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 13:40:34,338 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:40:34,340 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:40:37,031 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 13:40:43,400 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:40:43,402 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:40:45,489 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 13:40:50,094 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:40:50,096 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:40:52,068 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 13:47:30,241 - app - INFO - [app.py:785] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 13:47:30,246 - app - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 13:47:33,925 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 13:47:33,926 - app - INFO - [app.py:797] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 13:47:33,926 - app - INFO - [app.py:799] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 13:47:33,926 - app - INFO - [app.py:799] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 13:47:33,926 - app - INFO - [app.py:799] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 13:47:33,926 - app - INFO - [app.py:803] - [SUCCESS] Application initialized successfully!
+2025-05-23 13:47:33,933 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 13:47:34,786 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 13:47:35,438 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:47:35,440 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:47:37,828 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:47:37,830 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:47:38,307 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 13:47:39,892 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 13:48:37,551 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:48:37,554 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:48:39,487 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 13:52:55,995 - app - INFO - [app.py:785] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 13:52:55,999 - app - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 13:52:59,612 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 13:52:59,612 - app - INFO - [app.py:797] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 13:52:59,612 - app - INFO - [app.py:799] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 13:52:59,612 - app - INFO - [app.py:799] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 13:52:59,613 - app - INFO - [app.py:799] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 13:52:59,613 - app - INFO - [app.py:803] - [SUCCESS] Application initialized successfully!
+2025-05-23 13:52:59,620 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 13:52:59,916 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 13:53:00,575 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:53:00,577 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:53:03,311 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 13:53:04,952 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:53:04,954 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:53:06,978 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 13:53:26,595 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:53:26,597 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:53:28,520 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 13:53:28,623 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:53:28,623 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:53:30,642 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 13:53:41,830 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:53:41,831 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:53:43,664 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:53:43,664 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:53:43,985 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 13:53:45,618 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:53:45,619 - app - INFO - [app.py:383] - Data API endpoint called for table: ES_bars
+2025-05-23 13:53:45,619 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:53:45,619 - app - INFO - [app.py:414] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:53:46,092 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 13:53:49,287 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 13:53:49,287 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 13:53:49,315 - app - INFO - [app.py:383] - Data API endpoint called for table: ES_bars
+2025-05-23 13:53:49,315 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:53:49,315 - app - INFO - [app.py:414] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 13:53:50,505 - app - INFO - [app.py:459] - Returning 13248 data points for 1min timeframe
+2025-05-23 13:53:53,440 - app - INFO - [app.py:459] - Returning 13248 data points for 1min timeframe
+2025-05-23 13:53:53,516 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 13:59:59,477 - app - INFO - [app.py:785] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 13:59:59,482 - app - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 14:00:03,075 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 14:00:03,075 - app - INFO - [app.py:797] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 14:00:03,075 - app - INFO - [app.py:799] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 14:00:03,075 - app - INFO - [app.py:799] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 14:00:03,076 - app - INFO - [app.py:799] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 14:00:03,076 - app - INFO - [app.py:803] - [SUCCESS] Application initialized successfully!
+2025-05-23 14:00:03,082 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 14:02:23,968 - app - INFO - [app.py:785] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 14:02:23,972 - app - INFO - [app.py:363] - Created saved_drawings table with indexes
+2025-05-23 14:02:27,610 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 14:02:27,610 - app - INFO - [app.py:797] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 14:02:27,610 - app - INFO - [app.py:799] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 14:02:27,610 - app - INFO - [app.py:799] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 14:02:27,610 - app - INFO - [app.py:799] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 14:02:27,611 - app - INFO - [app.py:803] - [SUCCESS] Application initialized successfully!
+2025-05-23 14:02:27,617 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 14:02:34,706 - app - INFO - [app.py:375] - Instruments API endpoint called
+2025-05-23 14:02:35,362 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:02:35,364 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=250
+2025-05-23 14:02:37,926 - app - INFO - [app.py:459] - Returning 250 data points for 1min timeframe
+2025-05-23 14:02:37,931 - app - INFO - [app.py:383] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:02:37,934 - app - INFO - [app.py:414] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=50000
+2025-05-23 14:02:39,894 - app - INFO - [app.py:459] - Returning 13260 data points for 1min timeframe
+2025-05-23 14:07:22,223 - __main__ - INFO - [app.py:852] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 14:07:22,228 - __main__ - INFO - [app.py:395] - Created saved_drawings table with indexes
+2025-05-23 14:07:25,965 - __main__ - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 14:07:25,967 - __main__ - INFO - [app.py:864] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 14:07:25,967 - __main__ - INFO - [app.py:866] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 14:07:25,967 - __main__ - INFO - [app.py:866] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 14:07:25,967 - __main__ - INFO - [app.py:866] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 14:07:25,967 - __main__ - INFO - [app.py:870] - [SUCCESS] Application initialized successfully!
+2025-05-23 14:07:26,001 - werkzeug - INFO - [_internal.py:97] - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-23 14:07:26,001 - werkzeug - INFO - [_internal.py:97] - [33mPress CTRL+C to quit[0m
+2025-05-23 14:09:38,675 - __main__ - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:09:38,675 - __main__ - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:09:38,680 - __main__ - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=250, offset=0
+2025-05-23 14:09:38,680 - __main__ - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=250, offset=0
+2025-05-23 14:09:43,022 - __main__ - INFO - [app.py:514] - Returning 250 data points for 1min timeframe (offset: 0, total: 13248)
+2025-05-23 14:09:43,023 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [23/May/2025 14:09:43] "GET /api/data/ES_bars?timeframe=1min&limit=250 HTTP/1.1" 200 -
+2025-05-23 14:09:43,575 - __main__ - INFO - [app.py:514] - Returning 250 data points for 1min timeframe (offset: 0, total: 13260)
+2025-05-23 14:09:43,576 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [23/May/2025 14:09:43] "GET /api/data/NQ_bars?timeframe=1min&limit=250 HTTP/1.1" 200 -
+2025-05-23 14:09:53,931 - __main__ - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:09:53,933 - __main__ - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=250, offset=0
+2025-05-23 14:09:56,422 - __main__ - INFO - [app.py:514] - Returning 250 data points for 1min timeframe (offset: 0, total: 13260)
+2025-05-23 14:09:56,422 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [23/May/2025 14:09:56] "GET /api/data/NQ_bars?timeframe=1min&limit=250 HTTP/1.1" 200 -
+2025-05-23 14:09:59,837 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [23/May/2025 14:09:59] "GET / HTTP/1.1" 200 -
+2025-05-23 14:09:59,854 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [23/May/2025 14:09:59] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-23 14:09:59,938 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [23/May/2025 14:09:59] "GET /static/style.css HTTP/1.1" 200 -
+2025-05-23 14:09:59,948 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [23/May/2025 14:09:59] "GET /static/script.js HTTP/1.1" 200 -
+2025-05-23 14:10:18,204 - app - INFO - [app.py:852] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 14:10:18,212 - app - INFO - [app.py:395] - Created saved_drawings table with indexes
+2025-05-23 14:10:21,859 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 14:10:21,859 - app - INFO - [app.py:864] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 14:10:21,859 - app - INFO - [app.py:866] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 14:10:21,860 - app - INFO - [app.py:866] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 14:10:21,860 - app - INFO - [app.py:866] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 14:10:21,860 - app - INFO - [app.py:870] - [SUCCESS] Application initialized successfully!
+2025-05-23 14:10:21,871 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 14:11:56,477 - app - INFO - [app.py:852] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 14:11:56,482 - app - INFO - [app.py:395] - Created saved_drawings table with indexes
+2025-05-23 14:12:00,048 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 14:12:00,048 - app - INFO - [app.py:864] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 14:12:00,048 - app - INFO - [app.py:866] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 14:12:00,048 - app - INFO - [app.py:866] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 14:12:00,049 - app - INFO - [app.py:866] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 14:12:00,049 - app - INFO - [app.py:870] - [SUCCESS] Application initialized successfully!
+2025-05-23 14:12:00,056 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 14:12:09,235 - app - INFO - [app.py:407] - Instruments API endpoint called
+2025-05-23 14:12:09,878 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:12:09,880 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 14:12:12,934 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 0, total: 13260)
+2025-05-23 14:12:28,976 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:12:28,977 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:12:28,978 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 14:12:28,979 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 14:12:33,123 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 0, total: 13260)
+2025-05-23 14:12:33,296 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 0, total: 13248)
+2025-05-23 14:12:33,300 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:12:33,301 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=500
+2025-05-23 14:12:35,661 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 500, total: 13248)
+2025-05-23 14:12:35,782 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:12:35,783 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=1000
+2025-05-23 14:12:38,186 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 1000, total: 13248)
+2025-05-23 14:12:38,303 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:12:38,304 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=1500
+2025-05-23 14:12:40,712 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 1500, total: 13248)
+2025-05-23 14:12:40,821 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:12:40,821 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=2000
+2025-05-23 14:12:42,908 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 2000, total: 13248)
+2025-05-23 14:12:43,017 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:12:43,018 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=2500
+2025-05-23 14:12:45,368 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 2500, total: 13248)
+2025-05-23 14:12:45,479 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:12:45,480 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=3000
+2025-05-23 14:12:47,853 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 3000, total: 13248)
+2025-05-23 14:12:47,973 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:12:47,973 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=3500
+2025-05-23 14:12:50,367 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 3500, total: 13248)
+2025-05-23 14:12:50,490 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:12:50,491 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=4000
+2025-05-23 14:12:52,548 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 4000, total: 13248)
+2025-05-23 14:12:52,666 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:12:52,667 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=4500
+2025-05-23 14:12:55,002 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 4500, total: 13248)
+2025-05-23 14:12:55,123 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:12:55,123 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=5000
+2025-05-23 14:12:57,565 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 5000, total: 13248)
+2025-05-23 14:12:57,676 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:12:57,677 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=5500
+2025-05-23 14:13:00,069 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 5500, total: 13248)
+2025-05-23 14:13:00,198 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:13:00,199 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=6000
+2025-05-23 14:13:02,298 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 6000, total: 13248)
+2025-05-23 14:13:02,412 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:13:02,413 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=6500
+2025-05-23 14:13:04,756 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 6500, total: 13248)
+2025-05-23 14:13:04,874 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:13:04,874 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=7000
+2025-05-23 14:13:07,219 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 7000, total: 13248)
+2025-05-23 14:13:07,334 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:13:07,335 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=7500
+2025-05-23 14:13:09,735 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 7500, total: 13248)
+2025-05-23 14:13:09,855 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:13:09,856 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=8000
+2025-05-23 14:13:11,903 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 8000, total: 13248)
+2025-05-23 14:13:12,019 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:13:12,020 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=8500
+2025-05-23 14:13:14,305 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 8500, total: 13248)
+2025-05-23 14:13:14,431 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:13:14,432 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=9000
+2025-05-23 14:13:16,785 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 9000, total: 13248)
+2025-05-23 14:13:16,907 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:13:16,908 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=9500
+2025-05-23 14:13:19,354 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 9500, total: 13248)
+2025-05-23 14:13:19,472 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:13:19,473 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=10000
+2025-05-23 14:13:21,593 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 10000, total: 13248)
+2025-05-23 14:13:21,718 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:13:21,719 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=10500
+2025-05-23 14:13:24,070 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 10500, total: 13248)
+2025-05-23 14:13:24,192 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:13:24,192 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=11000
+2025-05-23 14:13:26,503 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 11000, total: 13248)
+2025-05-23 14:13:26,623 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:13:26,624 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=11500
+2025-05-23 14:13:28,951 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 11500, total: 13248)
+2025-05-23 14:13:29,084 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:13:29,084 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=12000
+2025-05-23 14:13:31,115 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 12000, total: 13248)
+2025-05-23 14:13:31,240 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:13:31,241 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=12500
+2025-05-23 14:13:33,521 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 12500, total: 13248)
+2025-05-23 14:13:33,645 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:13:33,646 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=13000
+2025-05-23 14:13:35,959 - app - INFO - [app.py:514] - Returning 248 data points for 1min timeframe (offset: 13000, total: 13248)
+2025-05-23 14:18:22,864 - app - INFO - [app.py:852] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 14:18:22,869 - app - INFO - [app.py:395] - Created saved_drawings table with indexes
+2025-05-23 14:18:26,364 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 14:18:26,365 - app - INFO - [app.py:864] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 14:18:26,365 - app - INFO - [app.py:866] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 14:18:26,365 - app - INFO - [app.py:866] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 14:18:26,365 - app - INFO - [app.py:866] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 14:18:26,365 - app - INFO - [app.py:870] - [SUCCESS] Application initialized successfully!
+2025-05-23 14:18:26,372 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 14:18:31,920 - app - INFO - [app.py:407] - Instruments API endpoint called
+2025-05-23 14:18:32,560 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:18:32,561 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=250, offset=0
+2025-05-23 14:18:35,446 - app - INFO - [app.py:514] - Returning 250 data points for 1min timeframe (offset: 0, total: 13260)
+2025-05-23 14:18:35,451 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:18:35,453 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=250
+2025-05-23 14:18:37,677 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 250, total: 13260)
+2025-05-23 14:18:37,797 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:18:37,799 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=1250
+2025-05-23 14:18:40,103 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 1250, total: 13260)
+2025-05-23 14:18:40,222 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:18:40,223 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=2250
+2025-05-23 14:18:42,943 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 2250, total: 13260)
+2025-05-23 14:18:43,066 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:18:43,067 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=3250
+2025-05-23 14:18:45,443 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 3250, total: 13260)
+2025-05-23 14:18:45,555 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:18:45,556 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=4250
+2025-05-23 14:18:47,793 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 4250, total: 13260)
+2025-05-23 14:18:47,916 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:18:47,917 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=5250
+2025-05-23 14:18:50,205 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 5250, total: 13260)
+2025-05-23 14:18:50,328 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:18:50,329 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=6250
+2025-05-23 14:18:53,068 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 6250, total: 13260)
+2025-05-23 14:18:53,193 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:18:53,194 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=7250
+2025-05-23 14:18:55,482 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 7250, total: 13260)
+2025-05-23 14:18:55,609 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:18:55,609 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=8250
+2025-05-23 14:18:57,886 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 8250, total: 13260)
+2025-05-23 14:18:58,004 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:18:58,005 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=9250
+2025-05-23 14:19:00,348 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 9250, total: 13260)
+2025-05-23 14:19:00,475 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:19:00,475 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=10250
+2025-05-23 14:19:03,018 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 10250, total: 13260)
+2025-05-23 14:19:03,133 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:19:03,134 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=11250
+2025-05-23 14:19:05,557 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 11250, total: 13260)
+2025-05-23 14:19:05,686 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:19:05,687 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=12250
+2025-05-23 14:19:07,976 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 12250, total: 13260)
+2025-05-23 14:19:08,100 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:19:08,101 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=13250
+2025-05-23 14:19:10,505 - app - INFO - [app.py:514] - Returning 10 data points for 1min timeframe (offset: 13250, total: 13260)
+2025-05-23 14:19:39,828 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:19:39,828 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=250, offset=0
+2025-05-23 14:19:42,714 - app - INFO - [app.py:514] - Returning 250 data points for 1min timeframe (offset: 0, total: 13248)
+2025-05-23 14:19:42,719 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:19:42,719 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=250
+2025-05-23 14:19:45,087 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 250, total: 13248)
+2025-05-23 14:19:45,207 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:19:45,208 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=1250
+2025-05-23 14:19:47,667 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 1250, total: 13248)
+2025-05-23 14:19:47,782 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:19:47,782 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=2250
+2025-05-23 14:19:50,220 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 2250, total: 13248)
+2025-05-23 14:19:50,332 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:19:50,332 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=3250
+2025-05-23 14:19:52,869 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 3250, total: 13248)
+2025-05-23 14:19:52,980 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:19:52,980 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=4250
+2025-05-23 14:19:55,406 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 4250, total: 13248)
+2025-05-23 14:19:55,521 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:19:55,521 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=5250
+2025-05-23 14:19:57,916 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 5250, total: 13248)
+2025-05-23 14:19:58,030 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:19:58,031 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=6250
+2025-05-23 14:20:00,480 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 6250, total: 13248)
+2025-05-23 14:20:00,598 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:20:00,599 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=7250
+2025-05-23 14:20:03,169 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 7250, total: 13248)
+2025-05-23 14:20:03,288 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:20:03,288 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=8250
+2025-05-23 14:20:05,729 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 8250, total: 13248)
+2025-05-23 14:20:05,847 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:20:05,848 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=9250
+2025-05-23 14:20:08,286 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 9250, total: 13248)
+2025-05-23 14:20:08,401 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:20:08,401 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=10250
+2025-05-23 14:20:10,829 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 10250, total: 13248)
+2025-05-23 14:20:10,956 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:20:10,957 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=11250
+2025-05-23 14:20:13,549 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 11250, total: 13248)
+2025-05-23 14:20:13,675 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:20:13,676 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=12250
+2025-05-23 14:20:16,127 - app - INFO - [app.py:514] - Returning 998 data points for 1min timeframe (offset: 12250, total: 13248)
+2025-05-23 14:20:28,621 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:20:28,622 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=250, offset=0
+2025-05-23 14:20:31,010 - app - INFO - [app.py:514] - Returning 250 data points for 1min timeframe (offset: 0, total: 13248)
+2025-05-23 14:20:31,019 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:20:31,020 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=250
+2025-05-23 14:20:33,408 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 250, total: 13248)
+2025-05-23 14:20:33,518 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:20:33,519 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=1250
+2025-05-23 14:20:36,052 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 1250, total: 13248)
+2025-05-23 14:20:36,161 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:20:36,162 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=2250
+2025-05-23 14:20:38,584 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 2250, total: 13248)
+2025-05-23 14:20:38,695 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:20:38,695 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=3250
+2025-05-23 14:20:41,110 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 3250, total: 13248)
+2025-05-23 14:20:41,222 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:20:41,222 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=4250
+2025-05-23 14:20:43,634 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 4250, total: 13248)
+2025-05-23 14:20:43,751 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:20:43,751 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=5250
+2025-05-23 14:20:44,343 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:20:44,344 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=250, offset=0
+2025-05-23 14:20:48,361 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 5250, total: 13248)
+2025-05-23 14:20:48,475 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:20:48,475 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=6250
+2025-05-23 14:20:49,991 - app - INFO - [app.py:514] - Returning 250 data points for 1min timeframe (offset: 0, total: 13260)
+2025-05-23 14:20:49,996 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:20:49,996 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=250
+2025-05-23 14:20:53,719 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 6250, total: 13248)
+2025-05-23 14:20:53,839 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:20:53,839 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=7250
+2025-05-23 14:20:55,585 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 250, total: 13260)
+2025-05-23 14:20:55,694 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:20:55,695 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=1250
+2025-05-23 14:20:59,496 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 7250, total: 13248)
+2025-05-23 14:20:59,615 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:20:59,615 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=8250
+2025-05-23 14:21:01,441 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 1250, total: 13260)
+2025-05-23 14:21:01,558 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:21:01,559 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=2250
+2025-05-23 14:21:04,781 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 8250, total: 13248)
+2025-05-23 14:21:04,900 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:21:04,900 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=9250
+2025-05-23 14:21:07,220 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 2250, total: 13260)
+2025-05-23 14:21:07,334 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:21:07,335 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=3250
+2025-05-23 14:21:10,498 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 9250, total: 13248)
+2025-05-23 14:21:10,614 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:21:10,614 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=10250
+2025-05-23 14:21:13,082 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 3250, total: 13260)
+2025-05-23 14:21:13,200 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:21:13,200 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=4250
+2025-05-23 14:21:15,548 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 10250, total: 13248)
+2025-05-23 14:21:15,662 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:21:15,662 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=11250
+2025-05-23 14:21:18,205 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 4250, total: 13260)
+2025-05-23 14:21:18,325 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:21:18,325 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=5250
+2025-05-23 14:21:20,206 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 11250, total: 13248)
+2025-05-23 14:21:20,316 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:21:20,316 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=12250
+2025-05-23 14:21:22,900 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 5250, total: 13260)
+2025-05-23 14:21:23,025 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:21:23,025 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=6250
+2025-05-23 14:21:24,523 - app - INFO - [app.py:514] - Returning 998 data points for 1min timeframe (offset: 12250, total: 13248)
+2025-05-23 14:21:26,311 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 6250, total: 13260)
+2025-05-23 14:21:26,437 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:21:26,437 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=7250
+2025-05-23 14:21:29,162 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 7250, total: 13260)
+2025-05-23 14:21:29,278 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:21:29,278 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=8250
+2025-05-23 14:21:31,890 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 8250, total: 13260)
+2025-05-23 14:21:32,014 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:21:32,014 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=9250
+2025-05-23 14:21:34,583 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 9250, total: 13260)
+2025-05-23 14:21:34,717 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:21:34,717 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=10250
+2025-05-23 14:21:37,297 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 10250, total: 13260)
+2025-05-23 14:21:37,426 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:21:37,426 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=11250
+2025-05-23 14:21:40,164 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 11250, total: 13260)
+2025-05-23 14:21:40,302 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:21:40,302 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=12250
+2025-05-23 14:21:42,917 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 12250, total: 13260)
+2025-05-23 14:21:43,042 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:21:43,043 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=13250
+2025-05-23 14:21:45,610 - app - INFO - [app.py:514] - Returning 10 data points for 1min timeframe (offset: 13250, total: 13260)
+2025-05-23 14:22:04,848 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:22:04,849 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=250, offset=0
+2025-05-23 14:22:07,152 - app - INFO - [app.py:514] - Returning 250 data points for 1min timeframe (offset: 0, total: 13248)
+2025-05-23 14:22:07,156 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:22:07,157 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=250
+2025-05-23 14:22:09,613 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 250, total: 13248)
+2025-05-23 14:22:09,722 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:22:09,722 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=1250
+2025-05-23 14:22:12,073 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 1250, total: 13248)
+2025-05-23 14:22:12,186 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:22:12,186 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=2250
+2025-05-23 14:22:14,524 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 2250, total: 13248)
+2025-05-23 14:22:14,643 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:22:14,643 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=3250
+2025-05-23 14:22:16,939 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 3250, total: 13248)
+2025-05-23 14:22:17,057 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:22:17,057 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=4250
+2025-05-23 14:22:19,495 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 4250, total: 13248)
+2025-05-23 14:22:19,614 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:22:19,614 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=5250
+2025-05-23 14:22:21,951 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 5250, total: 13248)
+2025-05-23 14:22:22,074 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:22:22,074 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=6250
+2025-05-23 14:22:24,397 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 6250, total: 13248)
+2025-05-23 14:22:24,520 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:22:24,520 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=7250
+2025-05-23 14:22:26,845 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 7250, total: 13248)
+2025-05-23 14:22:26,964 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:22:26,964 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=8250
+2025-05-23 14:22:29,441 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 8250, total: 13248)
+2025-05-23 14:22:29,562 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:22:29,562 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=9250
+2025-05-23 14:22:31,920 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 9250, total: 13248)
+2025-05-23 14:22:32,043 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:22:32,043 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=10250
+2025-05-23 14:22:34,392 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 10250, total: 13248)
+2025-05-23 14:24:19,643 - app - INFO - [app.py:852] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 14:24:19,649 - app - INFO - [app.py:395] - Created saved_drawings table with indexes
+2025-05-23 14:24:23,227 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 14:24:23,227 - app - INFO - [app.py:864] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 14:24:23,227 - app - INFO - [app.py:866] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 14:24:23,227 - app - INFO - [app.py:866] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 14:24:23,228 - app - INFO - [app.py:866] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 14:24:23,228 - app - INFO - [app.py:870] - [SUCCESS] Application initialized successfully!
+2025-05-23 14:24:23,234 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 14:24:25,801 - app - INFO - [app.py:407] - Instruments API endpoint called
+2025-05-23 14:24:26,437 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:24:26,439 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=250, offset=0
+2025-05-23 14:24:29,350 - app - INFO - [app.py:514] - Returning 250 data points for 1min timeframe (offset: 0, total: 13260)
+2025-05-23 14:24:29,356 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:24:29,358 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=250
+2025-05-23 14:24:31,562 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 250, total: 13260)
+2025-05-23 14:24:31,680 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:24:31,682 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=1250
+2025-05-23 14:24:33,929 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 1250, total: 13260)
+2025-05-23 14:24:34,048 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:24:34,049 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=2250
+2025-05-23 14:24:36,577 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 2250, total: 13260)
+2025-05-23 14:24:36,698 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:24:36,698 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=3250
+2025-05-23 14:24:38,918 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:24:38,918 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=250, offset=0
+2025-05-23 14:24:39,040 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 3250, total: 13260)
+2025-05-23 14:24:39,151 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:24:39,151 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=4250
+2025-05-23 14:24:43,495 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 4250, total: 13260)
+2025-05-23 14:24:43,601 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:24:43,601 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=5250
+2025-05-23 14:24:43,734 - app - INFO - [app.py:514] - Returning 250 data points for 1min timeframe (offset: 0, total: 13248)
+2025-05-23 14:24:43,738 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:24:43,739 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=250
+2025-05-23 14:24:48,761 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 250, total: 13248)
+2025-05-23 14:24:48,830 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 5250, total: 13260)
+2025-05-23 14:24:48,867 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:24:48,867 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=1250
+2025-05-23 14:24:48,938 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:24:48,939 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=6250
+2025-05-23 14:24:53,901 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 1250, total: 13248)
+2025-05-23 14:24:54,016 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:24:54,016 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=2250
+2025-05-23 14:24:54,396 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 6250, total: 13260)
+2025-05-23 14:24:54,508 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:24:54,508 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=7250
+2025-05-23 14:24:57,223 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:24:57,223 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=250, offset=0
+2025-05-23 14:24:59,513 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 2250, total: 13248)
+2025-05-23 14:24:59,627 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:24:59,627 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=3250
+2025-05-23 14:25:01,072 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 7250, total: 13260)
+2025-05-23 14:25:01,187 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:25:01,188 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=8250
+2025-05-23 14:25:05,394 - app - INFO - [app.py:514] - Returning 250 data points for 1min timeframe (offset: 0, total: 13260)
+2025-05-23 14:25:05,399 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:25:05,399 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=250
+2025-05-23 14:25:06,950 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 3250, total: 13248)
+2025-05-23 14:25:07,056 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:25:07,057 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=4250
+2025-05-23 14:25:09,274 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 8250, total: 13260)
+2025-05-23 14:25:09,395 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:25:09,395 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=9250
+2025-05-23 14:25:12,806 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 250, total: 13260)
+2025-05-23 14:25:12,917 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:25:12,917 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=1250
+2025-05-23 14:25:14,538 - app - INFO - [app.py:514] - Returning 1000 data points for 1min timeframe (offset: 4250, total: 13248)
+2025-05-23 14:25:14,645 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:25:14,645 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=5250
+2025-05-23 14:30:28,984 - app - INFO - [app.py:852] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 14:30:28,993 - app - INFO - [app.py:395] - Created saved_drawings table with indexes
+2025-05-23 14:30:32,535 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 14:30:32,535 - app - INFO - [app.py:864] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 14:30:32,536 - app - INFO - [app.py:866] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 14:30:32,536 - app - INFO - [app.py:866] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 14:30:32,536 - app - INFO - [app.py:866] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 14:30:32,536 - app - INFO - [app.py:870] - [SUCCESS] Application initialized successfully!
+2025-05-23 14:30:32,547 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 14:30:34,971 - app - INFO - [app.py:407] - Instruments API endpoint called
+2025-05-23 14:30:35,611 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:30:35,613 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 14:30:38,511 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 0, total: 13260)
+2025-05-23 14:30:38,520 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:30:38,521 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:30:38,523 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=500
+2025-05-23 14:30:38,523 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=3000
+2025-05-23 14:30:42,862 - app - INFO - [app.py:514] - Returning 2500 data points for 1min timeframe (offset: 500, total: 13260)
+2025-05-23 14:30:42,892 - app - INFO - [app.py:514] - Returning 2500 data points for 1min timeframe (offset: 3000, total: 13260)
+2025-05-23 14:30:42,925 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:30:42,926 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:30:42,926 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=5500
+2025-05-23 14:30:42,926 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=8000
+2025-05-23 14:30:47,673 - app - INFO - [app.py:514] - Returning 2500 data points for 1min timeframe (offset: 8000, total: 13260)
+2025-05-23 14:30:47,910 - app - INFO - [app.py:514] - Returning 2500 data points for 1min timeframe (offset: 5500, total: 13260)
+2025-05-23 14:30:47,940 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:30:47,940 - app - INFO - [app.py:415] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:30:47,941 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=10500
+2025-05-23 14:30:47,941 - app - INFO - [app.py:452] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=13000
+2025-05-23 14:30:52,499 - app - INFO - [app.py:514] - Returning 260 data points for 1min timeframe (offset: 13000, total: 13260)
+2025-05-23 14:30:52,508 - app - INFO - [app.py:514] - Returning 2500 data points for 1min timeframe (offset: 10500, total: 13260)
+2025-05-23 14:31:23,898 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:31:23,900 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 14:31:26,599 - app - INFO - [app.py:514] - Returning 500 data points for 1min timeframe (offset: 0, total: 13248)
+2025-05-23 14:31:26,604 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:31:26,604 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:31:26,605 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=500
+2025-05-23 14:31:26,605 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=3000
+2025-05-23 14:31:31,771 - app - INFO - [app.py:514] - Returning 2500 data points for 1min timeframe (offset: 3000, total: 13248)
+2025-05-23 14:31:31,924 - app - INFO - [app.py:514] - Returning 2500 data points for 1min timeframe (offset: 500, total: 13248)
+2025-05-23 14:31:31,950 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:31:31,950 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:31:31,951 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=5500
+2025-05-23 14:31:31,951 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=8000
+2025-05-23 14:31:37,301 - app - INFO - [app.py:514] - Returning 2500 data points for 1min timeframe (offset: 8000, total: 13248)
+2025-05-23 14:31:37,347 - app - INFO - [app.py:514] - Returning 2500 data points for 1min timeframe (offset: 5500, total: 13248)
+2025-05-23 14:31:37,389 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:31:37,389 - app - INFO - [app.py:415] - Data API endpoint called for table: ES_bars
+2025-05-23 14:31:37,389 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=10500
+2025-05-23 14:31:37,389 - app - INFO - [app.py:452] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=13000
+2025-05-23 14:31:42,961 - app - INFO - [app.py:514] - Returning 2500 data points for 1min timeframe (offset: 10500, total: 13248)
+2025-05-23 14:31:43,061 - app - INFO - [app.py:514] - Returning 248 data points for 1min timeframe (offset: 13000, total: 13248)
+2025-05-23 14:37:16,649 - app - INFO - [app.py:861] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 14:37:16,654 - app - INFO - [app.py:395] - Created saved_drawings table with indexes
+2025-05-23 14:37:20,279 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 14:37:20,279 - app - INFO - [app.py:873] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 14:37:20,279 - app - INFO - [app.py:875] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 14:37:20,279 - app - INFO - [app.py:875] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 14:37:20,279 - app - INFO - [app.py:875] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 14:37:20,280 - app - INFO - [app.py:879] - [SUCCESS] Application initialized successfully!
+2025-05-23 14:37:20,286 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 14:37:22,253 - app - INFO - [app.py:407] - Instruments API endpoint called
+2025-05-23 14:37:22,904 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:37:22,906 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 14:37:25,804 - app - INFO - [app.py:519] - Returning 500 data points for 1min timeframe (offset: 0, total: 13260)
+2025-05-23 14:37:25,815 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:37:25,815 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:37:25,818 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=500
+2025-05-23 14:37:25,818 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=3000
+2025-05-23 14:37:30,125 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 500, total: 13260)
+2025-05-23 14:37:30,146 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 3000, total: 13260)
+2025-05-23 14:37:31,171 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:37:31,171 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:37:31,172 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=5500
+2025-05-23 14:37:31,172 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=8000
+2025-05-23 14:37:35,933 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 8000, total: 13260)
+2025-05-23 14:37:36,148 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 5500, total: 13260)
+2025-05-23 14:37:36,182 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:37:36,182 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:37:36,182 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=10500
+2025-05-23 14:37:36,182 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=13000
+2025-05-23 14:37:40,769 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 10500, total: 13260)
+2025-05-23 14:37:40,775 - app - INFO - [app.py:519] - Returning 260 data points for 1min timeframe (offset: 13000, total: 13260)
+2025-05-23 14:41:57,485 - app - INFO - [app.py:861] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 14:41:57,489 - app - INFO - [app.py:395] - Created saved_drawings table with indexes
+2025-05-23 14:41:58,170 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 14:41:58,170 - app - INFO - [app.py:873] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 14:41:58,171 - app - INFO - [app.py:875] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 14:41:58,171 - app - INFO - [app.py:875] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 14:41:58,171 - app - INFO - [app.py:875] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 14:41:58,171 - app - INFO - [app.py:879] - [SUCCESS] Application initialized successfully!
+2025-05-23 14:41:58,178 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 14:42:01,397 - app - INFO - [app.py:407] - Instruments API endpoint called
+2025-05-23 14:42:02,047 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:42:02,049 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 14:42:04,236 - app - INFO - [app.py:519] - Returning 500 data points for 1min timeframe (offset: 0, total: 13260)
+2025-05-23 14:42:04,243 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:42:04,243 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:42:04,245 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=500
+2025-05-23 14:42:04,257 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=3000
+2025-05-23 14:42:08,144 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 14:42:08,145 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 14:42:08,954 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 500, total: 13260)
+2025-05-23 14:42:09,025 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 3000, total: 13260)
+2025-05-23 14:42:09,060 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:42:09,060 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:42:09,060 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=5500
+2025-05-23 14:42:09,061 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=8000
+2025-05-23 14:42:14,777 - app - INFO - [app.py:519] - Returning 500 data points for 1min timeframe (offset: 0, total: 13248)
+2025-05-23 14:42:14,782 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 14:42:14,783 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=500
+2025-05-23 14:42:15,110 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 8000, total: 13260)
+2025-05-23 14:42:15,398 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 5500, total: 13260)
+2025-05-23 14:42:15,438 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:42:15,438 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:42:15,438 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=10500
+2025-05-23 14:42:15,438 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=13000
+2025-05-23 14:42:21,875 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 500, total: 13248)
+2025-05-23 14:42:21,896 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 14:42:21,896 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=3000
+2025-05-23 14:42:22,163 - app - INFO - [app.py:519] - Returning 260 data points for 1min timeframe (offset: 13000, total: 13260)
+2025-05-23 14:42:23,457 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 10500, total: 13260)
+2025-05-23 14:42:25,303 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 3000, total: 13248)
+2025-05-23 14:42:25,331 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 14:42:25,332 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=5500
+2025-05-23 14:42:27,657 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 5500, total: 13248)
+2025-05-23 14:42:27,689 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 14:42:27,689 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=8000
+2025-05-23 14:42:30,038 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 8000, total: 13248)
+2025-05-23 14:42:30,071 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 14:42:30,071 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=10500
+2025-05-23 14:42:32,584 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 10500, total: 13248)
+2025-05-23 14:42:32,604 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 14:42:32,604 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=13000
+2025-05-23 14:42:34,952 - app - INFO - [app.py:519] - Returning 248 data points for 1min timeframe (offset: 13000, total: 13248)
+2025-05-23 14:45:16,790 - app - INFO - [app.py:861] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 14:45:16,795 - app - INFO - [app.py:395] - Created saved_drawings table with indexes
+2025-05-23 14:45:20,390 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 14:45:20,390 - app - INFO - [app.py:873] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 14:45:20,390 - app - INFO - [app.py:875] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 14:45:20,390 - app - INFO - [app.py:875] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 14:45:20,391 - app - INFO - [app.py:875] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 14:45:20,391 - app - INFO - [app.py:879] - [SUCCESS] Application initialized successfully!
+2025-05-23 14:45:20,399 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 14:45:22,464 - app - INFO - [app.py:407] - Instruments API endpoint called
+2025-05-23 14:45:23,106 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:45:23,107 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 14:45:25,995 - app - INFO - [app.py:519] - Returning 500 data points for 1min timeframe (offset: 0, total: 13260)
+2025-05-23 14:45:26,003 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:45:26,003 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:45:26,005 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=500
+2025-05-23 14:45:26,015 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=3000
+2025-05-23 14:45:30,475 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 500, total: 13260)
+2025-05-23 14:45:30,478 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 3000, total: 13260)
+2025-05-23 14:45:30,518 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:45:30,518 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:45:30,518 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=5500
+2025-05-23 14:45:30,518 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=8000
+2025-05-23 14:45:35,397 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 8000, total: 13260)
+2025-05-23 14:45:35,629 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 5500, total: 13260)
+2025-05-23 14:45:35,662 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:45:35,662 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:45:35,663 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=10500
+2025-05-23 14:45:35,663 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=13000
+2025-05-23 14:45:40,301 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 10500, total: 13260)
+2025-05-23 14:45:40,308 - app - INFO - [app.py:519] - Returning 260 data points for 1min timeframe (offset: 13000, total: 13260)
+2025-05-23 14:49:02,967 - app - INFO - [app.py:861] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 14:49:02,972 - app - INFO - [app.py:395] - Created saved_drawings table with indexes
+2025-05-23 14:49:06,761 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 14:49:06,761 - app - INFO - [app.py:873] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 14:49:06,761 - app - INFO - [app.py:875] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 14:49:06,762 - app - INFO - [app.py:875] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 14:49:06,762 - app - INFO - [app.py:875] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 14:49:06,762 - app - INFO - [app.py:879] - [SUCCESS] Application initialized successfully!
+2025-05-23 14:49:06,770 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 14:51:03,824 - app - INFO - [app.py:861] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 14:51:03,829 - app - INFO - [app.py:395] - Created saved_drawings table with indexes
+2025-05-23 14:51:07,555 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 14:51:07,555 - app - INFO - [app.py:873] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 14:51:07,555 - app - INFO - [app.py:875] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 14:51:07,555 - app - INFO - [app.py:875] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 14:51:07,555 - app - INFO - [app.py:875] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 14:51:07,555 - app - INFO - [app.py:879] - [SUCCESS] Application initialized successfully!
+2025-05-23 14:51:07,562 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 14:51:07,770 - app - INFO - [app.py:407] - Instruments API endpoint called
+2025-05-23 14:51:08,416 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:51:08,418 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 14:51:11,299 - app - INFO - [app.py:519] - Returning 500 data points for 1min timeframe (offset: 0, total: 13260)
+2025-05-23 14:51:11,306 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:51:11,306 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:51:11,309 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=500
+2025-05-23 14:51:11,309 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=3000
+2025-05-23 14:51:15,764 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 500, total: 13260)
+2025-05-23 14:51:15,782 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 3000, total: 13260)
+2025-05-23 14:51:15,820 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:51:15,820 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:51:15,820 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=5500
+2025-05-23 14:51:15,820 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=8000
+2025-05-23 14:51:20,568 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 8000, total: 13260)
+2025-05-23 14:51:20,817 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 5500, total: 13260)
+2025-05-23 14:51:20,858 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:51:20,858 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:51:20,858 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=10500
+2025-05-23 14:51:20,859 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=13000
+2025-05-23 14:51:25,435 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 10500, total: 13260)
+2025-05-23 14:51:25,441 - app - INFO - [app.py:519] - Returning 260 data points for 1min timeframe (offset: 13000, total: 13260)
+2025-05-23 14:54:18,973 - app - INFO - [app.py:861] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 14:54:18,978 - app - INFO - [app.py:395] - Created saved_drawings table with indexes
+2025-05-23 14:54:22,695 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 14:54:22,696 - app - INFO - [app.py:873] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 14:54:22,696 - app - INFO - [app.py:875] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 14:54:22,696 - app - INFO - [app.py:875] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 14:54:22,696 - app - INFO - [app.py:875] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 14:54:22,696 - app - INFO - [app.py:879] - [SUCCESS] Application initialized successfully!
+2025-05-23 14:54:22,704 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 14:54:23,838 - app - INFO - [app.py:407] - Instruments API endpoint called
+2025-05-23 14:54:24,487 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:54:24,489 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 14:54:27,521 - app - INFO - [app.py:519] - Returning 500 data points for 1min timeframe (offset: 0, total: 13260)
+2025-05-23 14:54:27,529 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:54:27,530 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:54:27,532 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=500
+2025-05-23 14:54:27,539 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=3000
+2025-05-23 14:54:31,987 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 500, total: 13260)
+2025-05-23 14:54:32,018 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 3000, total: 13260)
+2025-05-23 14:54:32,048 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:54:32,049 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:54:32,049 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=5500
+2025-05-23 14:54:32,049 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=8000
+2025-05-23 14:54:36,766 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 8000, total: 13260)
+2025-05-23 14:54:37,006 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 5500, total: 13260)
+2025-05-23 14:54:37,045 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:54:37,045 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:54:37,045 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=10500
+2025-05-23 14:54:37,045 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=13000
+2025-05-23 14:54:41,471 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 10500, total: 13260)
+2025-05-23 14:54:41,477 - app - INFO - [app.py:519] - Returning 260 data points for 1min timeframe (offset: 13000, total: 13260)
+2025-05-23 14:57:29,342 - app - INFO - [app.py:861] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 14:57:29,345 - app - INFO - [app.py:395] - Created saved_drawings table with indexes
+2025-05-23 14:57:30,037 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 14:57:30,037 - app - INFO - [app.py:873] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 14:57:30,037 - app - INFO - [app.py:875] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 14:57:30,037 - app - INFO - [app.py:875] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 14:57:30,038 - app - INFO - [app.py:875] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 14:57:30,038 - app - INFO - [app.py:879] - [SUCCESS] Application initialized successfully!
+2025-05-23 14:57:30,045 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 14:57:31,585 - app - INFO - [app.py:407] - Instruments API endpoint called
+2025-05-23 14:57:32,219 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:57:32,221 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 14:57:34,407 - app - INFO - [app.py:519] - Returning 500 data points for 1min timeframe (offset: 0, total: 13260)
+2025-05-23 14:57:34,417 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:57:34,417 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:57:34,419 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=500
+2025-05-23 14:57:34,435 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=3000
+2025-05-23 14:57:38,972 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 500, total: 13260)
+2025-05-23 14:57:39,039 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 3000, total: 13260)
+2025-05-23 14:57:39,061 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:57:39,061 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:57:39,062 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=5500
+2025-05-23 14:57:39,062 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=8000
+2025-05-23 14:57:43,963 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 8000, total: 13260)
+2025-05-23 14:57:44,145 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 5500, total: 13260)
+2025-05-23 14:57:44,166 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:57:44,166 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 14:57:44,166 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=10500
+2025-05-23 14:57:44,166 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=13000
+2025-05-23 14:57:47,802 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 14:57:47,802 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 14:57:49,101 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 10500, total: 13260)
+2025-05-23 14:57:49,128 - app - INFO - [app.py:519] - Returning 260 data points for 1min timeframe (offset: 13000, total: 13260)
+2025-05-23 14:57:51,341 - app - INFO - [app.py:519] - Returning 500 data points for 1min timeframe (offset: 0, total: 13248)
+2025-05-23 14:57:51,346 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 14:57:51,347 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 14:57:51,347 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=500
+2025-05-23 14:57:51,347 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=3000
+2025-05-23 14:57:56,791 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 3000, total: 13248)
+2025-05-23 14:57:56,938 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 500, total: 13248)
+2025-05-23 14:57:56,959 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 14:57:56,959 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 14:57:56,959 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=5500
+2025-05-23 14:57:56,959 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=8000
+2025-05-23 14:58:02,285 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 8000, total: 13248)
+2025-05-23 14:58:02,297 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 5500, total: 13248)
+2025-05-23 14:58:02,319 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 14:58:02,319 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 14:58:02,319 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=10500
+2025-05-23 14:58:02,319 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=13000
+2025-05-23 14:58:07,707 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 10500, total: 13248)
+2025-05-23 14:58:07,863 - app - INFO - [app.py:519] - Returning 248 data points for 1min timeframe (offset: 13000, total: 13248)
+2025-05-23 15:04:00,994 - app - INFO - [app.py:861] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 15:04:00,998 - app - INFO - [app.py:395] - Created saved_drawings table with indexes
+2025-05-23 15:04:04,631 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 15:04:04,631 - app - INFO - [app.py:873] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 15:04:04,631 - app - INFO - [app.py:875] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 15:04:04,631 - app - INFO - [app.py:875] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 15:04:04,631 - app - INFO - [app.py:875] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 15:04:04,632 - app - INFO - [app.py:879] - [SUCCESS] Application initialized successfully!
+2025-05-23 15:04:04,639 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 15:04:08,033 - app - INFO - [app.py:407] - Instruments API endpoint called
+2025-05-23 15:04:08,674 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:04:08,676 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 15:04:09,417 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:04:09,420 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 15:04:12,644 - app - INFO - [app.py:519] - Returning 500 data points for 1min timeframe (offset: 0, total: 13260)
+2025-05-23 15:04:12,651 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:04:12,653 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=500
+2025-05-23 15:04:12,968 - app - INFO - [app.py:519] - Returning 500 data points for 1min timeframe (offset: 0, total: 13248)
+2025-05-23 15:04:12,975 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:04:12,975 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=500
+2025-05-23 15:04:17,329 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 500, total: 13260)
+2025-05-23 15:04:17,350 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:04:17,350 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=3000
+2025-05-23 15:04:17,661 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 500, total: 13248)
+2025-05-23 15:04:17,680 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:04:17,680 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=3000
+2025-05-23 15:04:21,758 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 3000, total: 13248)
+2025-05-23 15:04:21,779 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:04:21,779 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=5500
+2025-05-23 15:04:21,826 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 3000, total: 13260)
+2025-05-23 15:04:21,847 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:04:21,848 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=5500
+2025-05-23 15:04:27,152 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 5500, total: 13248)
+2025-05-23 15:04:27,173 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:04:27,174 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=8000
+2025-05-23 15:04:27,910 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 5500, total: 13260)
+2025-05-23 15:04:27,932 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:04:27,933 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=8000
+2025-05-23 15:04:31,296 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 8000, total: 13248)
+2025-05-23 15:04:31,316 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:04:31,316 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=10500
+2025-05-23 15:04:32,498 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 8000, total: 13260)
+2025-05-23 15:04:32,519 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:04:32,519 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=10500
+2025-05-23 15:04:36,507 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 10500, total: 13248)
+2025-05-23 15:04:36,527 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:04:36,528 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=13000
+2025-05-23 15:04:38,546 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 10500, total: 13260)
+2025-05-23 15:04:38,566 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:04:38,567 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=13000
+2025-05-23 15:04:40,679 - app - INFO - [app.py:519] - Returning 248 data points for 1min timeframe (offset: 13000, total: 13248)
+2025-05-23 15:04:41,796 - app - INFO - [app.py:519] - Returning 260 data points for 1min timeframe (offset: 13000, total: 13260)
+2025-05-23 15:07:22,862 - app - INFO - [app.py:861] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 15:07:22,865 - app - INFO - [app.py:395] - Created saved_drawings table with indexes
+2025-05-23 15:07:23,502 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 15:07:23,502 - app - INFO - [app.py:873] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 15:07:23,502 - app - INFO - [app.py:875] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 15:07:23,503 - app - INFO - [app.py:875] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 15:07:23,503 - app - INFO - [app.py:875] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 15:07:23,503 - app - INFO - [app.py:879] - [SUCCESS] Application initialized successfully!
+2025-05-23 15:07:23,510 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 15:07:25,504 - app - INFO - [app.py:407] - Instruments API endpoint called
+2025-05-23 15:07:26,140 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:07:26,142 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 15:07:28,444 - app - INFO - [app.py:519] - Returning 500 data points for 1min timeframe (offset: 0, total: 13260)
+2025-05-23 15:07:28,451 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:07:28,452 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:07:28,453 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=500
+2025-05-23 15:07:28,467 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=3000
+2025-05-23 15:07:29,283 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:07:29,283 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 15:07:34,371 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 500, total: 13260)
+2025-05-23 15:07:34,516 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 3000, total: 13260)
+2025-05-23 15:07:34,538 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:07:34,538 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:07:34,538 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=5500
+2025-05-23 15:07:34,538 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=8000
+2025-05-23 15:07:35,866 - app - INFO - [app.py:519] - Returning 500 data points for 1min timeframe (offset: 0, total: 13248)
+2025-05-23 15:07:35,872 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:07:35,872 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=500
+2025-05-23 15:07:40,913 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 5500, total: 13260)
+2025-05-23 15:07:40,969 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 8000, total: 13260)
+2025-05-23 15:07:40,991 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:07:40,991 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:07:40,991 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=10500
+2025-05-23 15:07:40,991 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=13000
+2025-05-23 15:07:42,678 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 500, total: 13248)
+2025-05-23 15:07:42,700 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:07:42,701 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=3000
+2025-05-23 15:07:47,953 - app - INFO - [app.py:519] - Returning 260 data points for 1min timeframe (offset: 13000, total: 13260)
+2025-05-23 15:07:49,196 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 10500, total: 13260)
+2025-05-23 15:07:49,264 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 3000, total: 13248)
+2025-05-23 15:07:49,284 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:07:49,285 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=5500
+2025-05-23 15:07:51,661 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 5500, total: 13248)
+2025-05-23 15:07:51,682 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:07:51,683 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=8000
+2025-05-23 15:07:54,192 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 8000, total: 13248)
+2025-05-23 15:07:54,212 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:07:54,213 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=10500
+2025-05-23 15:07:56,813 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 10500, total: 13248)
+2025-05-23 15:07:56,833 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:07:56,833 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=13000
+2025-05-23 15:07:59,254 - app - INFO - [app.py:519] - Returning 248 data points for 1min timeframe (offset: 13000, total: 13248)
+2025-05-23 15:12:21,675 - app - INFO - [app.py:861] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 15:12:21,678 - app - INFO - [app.py:395] - Created saved_drawings table with indexes
+2025-05-23 15:12:22,325 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 15:12:22,325 - app - INFO - [app.py:873] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 15:12:22,325 - app - INFO - [app.py:875] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 15:12:22,325 - app - INFO - [app.py:875] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 15:12:22,326 - app - INFO - [app.py:875] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 15:12:22,326 - app - INFO - [app.py:879] - [SUCCESS] Application initialized successfully!
+2025-05-23 15:12:22,333 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 15:12:24,424 - app - INFO - [app.py:407] - Instruments API endpoint called
+2025-05-23 15:12:25,073 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:12:25,075 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 15:12:27,241 - app - INFO - [app.py:519] - Returning 500 data points for 1min timeframe (offset: 0, total: 13260)
+2025-05-23 15:12:27,248 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:12:27,248 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:12:27,250 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=500
+2025-05-23 15:12:27,260 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=3000
+2025-05-23 15:12:31,760 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 500, total: 13260)
+2025-05-23 15:12:31,812 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 3000, total: 13260)
+2025-05-23 15:12:31,831 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:12:31,832 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:12:31,832 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=5500
+2025-05-23 15:12:31,832 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=8000
+2025-05-23 15:12:36,662 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 8000, total: 13260)
+2025-05-23 15:12:36,884 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 5500, total: 13260)
+2025-05-23 15:12:36,907 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:12:36,907 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:12:36,907 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=10500
+2025-05-23 15:12:36,907 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=13000
+2025-05-23 15:12:41,483 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 10500, total: 13260)
+2025-05-23 15:12:41,494 - app - INFO - [app.py:519] - Returning 260 data points for 1min timeframe (offset: 13000, total: 13260)
+2025-05-23 15:13:03,102 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:13:03,103 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 15:13:05,502 - app - INFO - [app.py:519] - Returning 500 data points for 1min timeframe (offset: 0, total: 13248)
+2025-05-23 15:13:05,508 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:13:05,508 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:13:05,509 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=500
+2025-05-23 15:13:05,509 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=3000
+2025-05-23 15:13:11,198 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 3000, total: 13248)
+2025-05-23 15:13:11,352 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 500, total: 13248)
+2025-05-23 15:13:11,371 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:13:11,372 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:13:11,372 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=5500
+2025-05-23 15:13:11,372 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=8000
+2025-05-23 15:13:16,819 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 8000, total: 13248)
+2025-05-23 15:13:16,892 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 5500, total: 13248)
+2025-05-23 15:13:16,913 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:13:16,913 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:13:16,913 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=10500
+2025-05-23 15:13:16,913 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=13000
+2025-05-23 15:13:22,623 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 10500, total: 13248)
+2025-05-23 15:13:22,744 - app - INFO - [app.py:519] - Returning 248 data points for 1min timeframe (offset: 13000, total: 13248)
+2025-05-23 15:16:04,261 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:16:04,261 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:16:04,261 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=5min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 15:16:04,261 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=5min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 15:16:10,701 - app - INFO - [app.py:519] - Returning 500 data points for 5min timeframe (offset: 0, total: 2657)
+2025-05-23 15:16:10,712 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:16:10,712 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=5min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=500
+2025-05-23 15:16:10,994 - app - INFO - [app.py:519] - Returning 500 data points for 5min timeframe (offset: 0, total: 2658)
+2025-05-23 15:16:11,002 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:16:11,002 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=5min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=500
+2025-05-23 15:16:16,956 - app - INFO - [app.py:519] - Returning 1000 data points for 5min timeframe (offset: 500, total: 2657)
+2025-05-23 15:16:16,971 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:16:16,972 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=5min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=1500
+2025-05-23 15:16:17,823 - app - INFO - [app.py:519] - Returning 1000 data points for 5min timeframe (offset: 500, total: 2658)
+2025-05-23 15:16:17,839 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:16:17,840 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=5min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=1500
+2025-05-23 15:16:19,089 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:16:19,089 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=60min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 15:16:19,090 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:16:19,090 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=60min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 15:16:29,298 - app - INFO - [app.py:519] - Returning 1000 data points for 5min timeframe (offset: 1500, total: 2657)
+2025-05-23 15:16:29,314 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:16:29,315 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=5min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=2500
+2025-05-23 15:16:32,313 - app - INFO - [app.py:519] - Returning 1000 data points for 5min timeframe (offset: 1500, total: 2658)
+2025-05-23 15:16:32,331 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:16:32,331 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=5min, start_date=2025-05-09, end_date=2025-05-23, limit=1000, offset=2500
+2025-05-23 15:16:34,827 - app - INFO - [app.py:519] - Returning 230 data points for 60min timeframe (offset: 0, total: 230)
+2025-05-23 15:16:35,809 - app - INFO - [app.py:519] - Returning 228 data points for 60min timeframe (offset: 0, total: 228)
+2025-05-23 15:16:39,283 - app - INFO - [app.py:519] - Returning 157 data points for 5min timeframe (offset: 2500, total: 2657)
+2025-05-23 15:16:40,004 - app - INFO - [app.py:519] - Returning 158 data points for 5min timeframe (offset: 2500, total: 2658)
+2025-05-23 15:18:02,737 - app - INFO - [app.py:861] - [START] Multi-Instrument Trading Data Viewer v2.0 starting up...
+2025-05-23 15:18:02,741 - app - INFO - [app.py:395] - Created saved_drawings table with indexes
+2025-05-23 15:18:06,273 - app - INFO - [app.py:215] - Detected 3 trading tables
+2025-05-23 15:18:06,273 - app - INFO - [app.py:873] - [SUCCESS] Found 3 trading instruments:
+2025-05-23 15:18:06,273 - app - INFO - [app.py:875] -   - ES (2024-06-18 to 2025-05-22)
+2025-05-23 15:18:06,273 - app - INFO - [app.py:875] -   - GC (2024-06-03 to 2025-05-22)
+2025-05-23 15:18:06,273 - app - INFO - [app.py:875] -   - NQ (2024-06-20 to 2025-05-22)
+2025-05-23 15:18:06,274 - app - INFO - [app.py:879] - [SUCCESS] Application initialized successfully!
+2025-05-23 15:18:06,286 - waitress - INFO - [wasyncore.py:486] - Serving on http://127.0.0.1:5000
+2025-05-23 15:18:07,796 - app - INFO - [app.py:407] - Instruments API endpoint called
+2025-05-23 15:18:08,456 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:18:08,459 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 15:18:11,342 - app - INFO - [app.py:519] - Returning 500 data points for 1min timeframe (offset: 0, total: 13260)
+2025-05-23 15:18:11,350 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:18:11,350 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:18:11,352 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=500
+2025-05-23 15:18:11,352 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=3000
+2025-05-23 15:18:15,763 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 500, total: 13260)
+2025-05-23 15:18:15,787 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 3000, total: 13260)
+2025-05-23 15:18:15,809 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:18:15,809 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:18:15,809 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=5500
+2025-05-23 15:18:15,809 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=8000
+2025-05-23 15:18:20,657 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 8000, total: 13260)
+2025-05-23 15:18:20,902 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 5500, total: 13260)
+2025-05-23 15:18:20,923 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:18:20,923 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:18:20,923 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=10500
+2025-05-23 15:18:20,924 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=13000
+2025-05-23 15:18:25,577 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 10500, total: 13260)
+2025-05-23 15:18:25,593 - app - INFO - [app.py:519] - Returning 260 data points for 1min timeframe (offset: 13000, total: 13260)
+2025-05-23 15:18:55,031 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:18:55,031 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 15:18:57,919 - app - INFO - [app.py:519] - Returning 500 data points for 1min timeframe (offset: 0, total: 13248)
+2025-05-23 15:18:57,926 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:18:57,926 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:18:57,926 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=500
+2025-05-23 15:18:57,926 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=3000
+2025-05-23 15:19:03,694 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 3000, total: 13248)
+2025-05-23 15:19:03,846 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 500, total: 13248)
+2025-05-23 15:19:03,867 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:19:03,867 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:19:03,867 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=5500
+2025-05-23 15:19:03,867 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=8000
+2025-05-23 15:19:09,399 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 8000, total: 13248)
+2025-05-23 15:19:09,438 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 5500, total: 13248)
+2025-05-23 15:19:09,458 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:19:09,458 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:19:09,458 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=10500
+2025-05-23 15:19:09,459 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=13000
+2025-05-23 15:19:15,296 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 10500, total: 13248)
+2025-05-23 15:19:15,451 - app - INFO - [app.py:519] - Returning 248 data points for 1min timeframe (offset: 13000, total: 13248)
+2025-05-23 15:19:30,642 - app - INFO - [app.py:407] - Instruments API endpoint called
+2025-05-23 15:19:31,293 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:19:31,293 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 15:19:33,888 - app - INFO - [app.py:519] - Returning 500 data points for 1min timeframe (offset: 0, total: 13260)
+2025-05-23 15:19:33,895 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:19:33,896 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:19:33,896 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=500
+2025-05-23 15:19:33,896 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=3000
+2025-05-23 15:19:35,326 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:19:35,326 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 15:19:42,401 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 3000, total: 13260)
+2025-05-23 15:19:42,635 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 500, total: 13260)
+2025-05-23 15:19:42,657 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:19:42,657 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:19:42,657 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=5500
+2025-05-23 15:19:42,657 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=8000
+2025-05-23 15:19:43,529 - app - INFO - [app.py:519] - Returning 500 data points for 1min timeframe (offset: 0, total: 13248)
+2025-05-23 15:19:43,535 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:19:43,535 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=500
+2025-05-23 15:19:51,734 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 5500, total: 13260)
+2025-05-23 15:19:51,896 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 8000, total: 13260)
+2025-05-23 15:19:51,917 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:19:51,917 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:19:51,917 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=10500
+2025-05-23 15:19:51,917 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=13000
+2025-05-23 15:19:52,155 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 500, total: 13248)
+2025-05-23 15:19:52,175 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:19:52,175 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=3000
+2025-05-23 15:20:00,582 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 3000, total: 13248)
+2025-05-23 15:20:00,603 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:20:00,603 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=5500
+2025-05-23 15:20:01,028 - app - INFO - [app.py:519] - Returning 260 data points for 1min timeframe (offset: 13000, total: 13260)
+2025-05-23 15:20:01,220 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 10500, total: 13260)
+2025-05-23 15:20:03,550 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 5500, total: 13248)
+2025-05-23 15:20:03,569 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:20:03,570 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=8000
+2025-05-23 15:20:06,079 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 8000, total: 13248)
+2025-05-23 15:20:06,099 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:20:06,100 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=10500
+2025-05-23 15:20:08,681 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 10500, total: 13248)
+2025-05-23 15:20:08,701 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:20:08,702 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=13000
+2025-05-23 15:20:11,362 - app - INFO - [app.py:519] - Returning 248 data points for 1min timeframe (offset: 13000, total: 13248)
+2025-05-23 15:26:12,970 - app - INFO - [app.py:407] - Instruments API endpoint called
+2025-05-23 15:26:13,605 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:26:13,606 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 15:26:16,251 - app - INFO - [app.py:519] - Returning 500 data points for 1min timeframe (offset: 0, total: 13260)
+2025-05-23 15:26:16,258 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:26:16,259 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:26:16,259 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=500
+2025-05-23 15:26:16,259 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=3000
+2025-05-23 15:26:19,925 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:26:19,926 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=500, offset=0
+2025-05-23 15:26:23,722 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 500, total: 13260)
+2025-05-23 15:26:23,882 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 3000, total: 13260)
+2025-05-23 15:26:23,903 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:26:23,903 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:26:23,903 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=5500
+2025-05-23 15:26:23,903 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=8000
+2025-05-23 15:26:28,127 - app - INFO - [app.py:519] - Returning 500 data points for 1min timeframe (offset: 0, total: 13248)
+2025-05-23 15:26:28,134 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:26:28,135 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=500
+2025-05-23 15:26:32,594 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 5500, total: 13260)
+2025-05-23 15:26:33,171 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 8000, total: 13260)
+2025-05-23 15:26:33,211 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:26:33,211 - app - INFO - [app.py:420] - Data API endpoint called for table: NQ_bars
+2025-05-23 15:26:33,211 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=10500
+2025-05-23 15:26:33,211 - app - INFO - [app.py:457] - Query parameters: table=NQ_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=13000
+2025-05-23 15:26:36,565 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 500, total: 13248)
+2025-05-23 15:26:37,213 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:26:37,213 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=3000
+2025-05-23 15:26:41,746 - app - INFO - [app.py:519] - Returning 260 data points for 1min timeframe (offset: 13000, total: 13260)
+2025-05-23 15:26:41,951 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 10500, total: 13260)
+2025-05-23 15:26:43,210 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 3000, total: 13248)
+2025-05-23 15:26:44,204 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:26:44,204 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=5500
+2025-05-23 15:26:46,846 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 5500, total: 13248)
+2025-05-23 15:26:47,205 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:26:47,205 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=8000
+2025-05-23 15:26:49,717 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 8000, total: 13248)
+2025-05-23 15:26:50,205 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:26:50,205 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=10500
+2025-05-23 15:26:52,728 - app - INFO - [app.py:519] - Returning 2500 data points for 1min timeframe (offset: 10500, total: 13248)
+2025-05-23 15:26:53,201 - app - INFO - [app.py:420] - Data API endpoint called for table: ES_bars
+2025-05-23 15:26:53,201 - app - INFO - [app.py:457] - Query parameters: table=ES_bars, timeframe=1min, start_date=2025-05-09, end_date=2025-05-23, limit=2500, offset=13000
+2025-05-23 15:26:55,841 - app - INFO - [app.py:519] - Returning 248 data points for 1min timeframe (offset: 13000, total: 13248)
